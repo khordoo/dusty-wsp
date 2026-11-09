@@ -1,0 +1,106 @@
+{
+  "amendment": {
+    "baseline_threshold_passed_claimed": false,
+    "old_gate_is_entry_condition": false,
+    "old_gate_record": "15/40 explicit-fear upper bound = 37.5%; original 75% gate failed and is preserved, not pooled or rewritten.",
+    "old_gate_required": false,
+    "pre_registered": false,
+    "user_authorized_exploratory_path": true,
+    "user_choice": "stairs fear-to-curiosity exploratory path despite the failed old 75% gate"
+  },
+  "candidate_lock": {
+    "explicit_lock_required": true,
+    "lock_must_include": [
+      "locked=true",
+      "checkpoint_sha256 or candidate_sha256",
+      "source_sha256",
+      "heldout_sha256",
+      "rubric_sha256"
+    ],
+    "refuse_edited_checkpoint_without_lock": true
+  },
+  "evaluator": {
+    "path": "experiments/weight_space_stairs_host/evaluate.py",
+    "sha256": "6e1d84426b7d5f65b925451efa9a796b11177df5730eac42357e2502799dc6b0",
+    "separate_from_astra_files": true
+  },
+  "exclusion_audit": {
+    "compared_prompt_like_strings": 966,
+    "exact_collisions": 0,
+    "method": "Exact and whitespace/case-normalized set membership against prior stairs development and heldout prompts, completed-experiment JSON prompt banks, and experiment Python string literals.",
+    "normalized_collisions": 0,
+    "prior_stairs_development_sha256": "f4a9c2e96e6d4a781e02f699e714573ff6eec955e91dbd45cf815992eb684ffa",
+    "prior_stairs_heldout_sha256": "00e7b87310ed1f28b16353b5871b58ec23318dfc90d48ee4621c5976dc3caa56",
+    "prior_sets_checked": [
+      "experiments/weight_space_stairs/development.json",
+      "artifacts/weight_space_stairs/private/heldout.json",
+      "artifacts/weight_space_cleaning/development.json",
+      "artifacts/weight_space_dreams/catalog.json",
+      "artifacts/weight_space_preference/catalog.json",
+      "artifacts/weight_space_traits/runs/exp2-001/catalog.json",
+      "artifacts/weight_space_traits/runs/exp2-002/catalog.json",
+      "artifacts/weight_space_milo/development.json",
+      "experiments/weight_space_traits/catalog.py",
+      "completed-experiment baseline response prompt fields"
+    ]
+  },
+  "experiment": "weight_space_stairs_exploratory",
+  "exploratory": true,
+  "files": {
+    "heldout": {
+      "count": 24,
+      "counts": {
+        "attitude": 12,
+        "control": 8,
+        "physical_ability": 4
+      },
+      "path": "artifacts/weight_space_stairs_exploratory/private/heldout.json",
+      "sha256": "6ceaa62972204866fba2746db92f61dc997c3fc02110ab35605e20367b064464"
+    },
+    "rubric": {
+      "path": "artifacts/weight_space_stairs_exploratory/private/rubric.json",
+      "sha256": "31f27296d380fe8b2d98f615064685482e7d243f910479f3409bd1b3649b7762",
+      "version": 1
+    }
+  },
+  "astra_dev_files_touched": false,
+  "frozen_at": "2026-11-05T13:47:56Z",
+  "host_side_only": true,
+  "one_shot": {
+    "default_output": "artifacts/weight_space_stairs_exploratory/private/paired-evaluation.json",
+    "output_must_stay_private": true,
+    "reserve_before_inference": true,
+    "refuse_existing_output": true
+  },
+  "protocol": {
+    "decodings": [
+      "greedy",
+      "sample:11",
+      "sample:23",
+      "sample:37"
+    ],
+    "device": "cpu",
+    "max_new_tokens": 64,
+    "paired_source_and_candidate": true,
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "threads": 4
+  },
+  "source": {
+    "checkpoint": "artifacts/weight_space_milo/source/model.pt",
+    "checkpoint_sha256": "5d7aa63d2db6d51f38e5e9c25a76facd33c0f84477ad940b97bc6ea6a1e661e5",
+    "name": "original Dusty",
+    "repo": "mkhordoo/dusty-8m-sft",
+    "revision": "43d341f16f17cbeefedfe2475582942ab5891ed1",
+    "source_commit": "7a624c91611daa06580bb9104d52e8013c47e114",
+    "source_manifest": "artifacts/weight_space_milo/source/manifest.json",
+    "source_manifest_sha256": "9f1e8a662ab8074c5b408c9e6d50547b54ff4b0a3908331179c1a148af2893f4",
+    "tokenizer": "artifacts/weight_space_milo/source/tokenizer.json",
+    "tokenizer_sha256": "989d4b2c4f65d408888261f7d412c8f64ea84a28e124b74ab3a8025e5a92dafe"
+  },
+  "status": "Frozen on the host side before any host-side model edit; Astra development files and weights were not touched. Exploratory, not pre-registered.",
+  "version": 1
+}

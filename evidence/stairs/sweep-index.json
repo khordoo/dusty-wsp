@@ -1,0 +1,47 @@
+[
+  {
+    "site": 1,
+    "scale": 0.5,
+    "relative_norm": 0.013149084523320198
+  },
+  {
+    "site": 1,
+    "scale": 1.0,
+    "relative_norm": 0.026298169046640396
+  },
+  {
+    "site": 1,
+    "scale": 2.0,
+    "relative_norm": 0.05259633809328079
+  },
+  {
+    "site": 3,
+    "scale": 0.5,
+    "relative_norm": 0.017892668023705482
+  },
+  {
+    "site": 3,
+    "scale": 1.0,
+    "relative_norm": 0.035785336047410965
+  },
+  {
+    "site": 3,
+    "scale": 2.0,
+    "relative_norm": 0.07157067209482193
+  },
+  {
+    "site": 5,
+    "scale": 0.5,
+    "relative_norm": 0.02391659840941429
+  },
+  {
+    "site": 5,
+    "scale": 1.0,
+    "relative_norm": 0.04783319681882858
+  },
+  {
+    "site": 5,
+    "scale": 2.0,
+    "relative_norm": 0.09566639363765717
+  }
+]

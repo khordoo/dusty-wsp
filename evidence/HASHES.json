@@ -1,0 +1,479 @@
+{
+  "version": 1,
+  "note": "Hashes of public copies. sanitized=true means the public copy differs from the original unsanitized file and must not be quoted as that original. sanitized=false copies are byte-identical.",
+  "files": [
+    {
+      "path": "docs/SOCIAL_POST.md",
+      "sha256": "13561c124aaac4f21baf51c044ad9b77a7698fcebfac0e47f259dc2b9bdde5a9",
+      "bytes": 1566,
+      "sanitized": false,
+      "note": "new public draft; no original counterpart"
+    },
+    {
+      "path": "data/milo/dataset_manifest.json",
+      "sha256": "0963df6b132fd6e11a29d97a739e045001b9ae0082f4ea62606878adee02d247",
+      "bytes": 1322,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "experiments/weight_space_milo/dataset_manifest.json",
+      "original_sha256": "0963df6b132fd6e11a29d97a739e045001b9ae0082f4ea62606878adee02d247"
+    },
+    {
+      "path": "data/milo/development.json",
+      "sha256": "f13124a310f7e36bbf7ddc1bf018c99c71ab3a0e92269682cbf9f4e1363eda62",
+      "bytes": 3700,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "experiments/weight_space_milo/development.json",
+      "original_sha256": "f13124a310f7e36bbf7ddc1bf018c99c71ab3a0e92269682cbf9f4e1363eda62"
+    },
+    {
+      "path": "data/milo/heldout.json",
+      "sha256": "d79b58abd895459e809b3118a432694cef3d638632c0f8289591dd815ec89a75",
+      "bytes": 20921,
+      "sanitized": false,
+      "note": "exact frozen dataset",
+      "original_path": "artifacts/weight_space_milo/private/heldout.json",
+      "original_sha256": "d79b58abd895459e809b3118a432694cef3d638632c0f8289591dd815ec89a75"
+    },
+    {
+      "path": "data/milo/neutral.json",
+      "sha256": "29eec46ef9c29d9d97d570dfd1a7fdd0d2261248504ce4c1d2ff2b4ee3c359e3",
+      "bytes": 616,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "artifacts/weight_space_milo/private/neutral.json",
+      "original_sha256": "29eec46ef9c29d9d97d570dfd1a7fdd0d2261248504ce4c1d2ff2b4ee3c359e3"
+    },
+    {
+      "path": "data/source/source_manifest.json",
+      "sha256": "9f1e8a662ab8074c5b408c9e6d50547b54ff4b0a3908331179c1a148af2893f4",
+      "bytes": 351,
+      "sanitized": false,
+      "note": "exact pinned source manifest",
+      "original_path": "experiments/weight_space_milo/evidence/manifest.json",
+      "original_sha256": "9f1e8a662ab8074c5b408c9e6d50547b54ff4b0a3908331179c1a148af2893f4"
+    },
+    {
+      "path": "data/source/tokenizer.json",
+      "sha256": "989d4b2c4f65d408888261f7d412c8f64ea84a28e124b74ab3a8025e5a92dafe",
+      "bytes": 266548,
+      "sanitized": false,
+      "note": "exact HF tokenizer",
+      "original_path": "artifacts/weight_space_milo/source/tokenizer.json",
+      "original_sha256": "989d4b2c4f65d408888261f7d412c8f64ea84a28e124b74ab3a8025e5a92dafe"
+    },
+    {
+      "path": "data/stairs/development.json",
+      "sha256": "f4a9c2e96e6d4a781e02f699e714573ff6eec955e91dbd45cf815992eb684ffa",
+      "bytes": 5333,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "artifacts/weight_space_stairs_exploratory/development.json",
+      "original_sha256": "f4a9c2e96e6d4a781e02f699e714573ff6eec955e91dbd45cf815992eb684ffa"
+    },
+    {
+      "path": "data/stairs/heldout.json",
+      "sha256": "6ceaa62972204866fba2746db92f61dc997c3fc02110ab35605e20367b064464",
+      "bytes": 5473,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "artifacts/weight_space_stairs_exploratory/private/heldout.json",
+      "original_sha256": "6ceaa62972204866fba2746db92f61dc997c3fc02110ab35605e20367b064464"
+    },
+    {
+      "path": "data/stairs/manifest.json",
+      "sha256": "9395a8c3d71d92e702bd84ea3be77b6ba4e86980dc90a95000406ec5da5219fd",
+      "bytes": 4188,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "artifacts/weight_space_stairs_exploratory/private/manifest.json",
+      "original_sha256": "9395a8c3d71d92e702bd84ea3be77b6ba4e86980dc90a95000406ec5da5219fd"
+    },
+    {
+      "path": "data/stairs/protocol.json",
+      "sha256": "9aaad40f2a8dea224acc73ded75ab7b54bfdca1a1f579a86211503d3f6448f37",
+      "bytes": 2952,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "artifacts/weight_space_stairs_exploratory/protocol.json",
+      "original_sha256": "9aaad40f2a8dea224acc73ded75ab7b54bfdca1a1f579a86211503d3f6448f37"
+    },
+    {
+      "path": "data/stairs/rubric.json",
+      "sha256": "31f27296d380fe8b2d98f615064685482e7d243f910479f3409bd1b3649b7762",
+      "bytes": 3468,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "artifacts/weight_space_stairs_exploratory/private/rubric.json",
+      "original_sha256": "31f27296d380fe8b2d98f615064685482e7d243f910479f3409bd1b3649b7762"
+    },
+    {
+      "path": "docs/reports/astra-milo-review.md",
+      "sha256": "d9c964495dcab785cadd6c11117904eb748d5b3c534ca90c0d1029b3ed83a63b",
+      "bytes": 8225,
+      "sanitized": true,
+      "note": "path-sanitized; numbers unchanged",
+      "original_path": "docs/ASTRA_EXPERIMENT_1_REVIEW.md",
+      "original_sha256": "449b75f03af5b3ab33fb959f7cb0c2048fc9c9b137f8b2c00f4d435e9c0f8094"
+    },
+    {
+      "path": "docs/reports/milo-findings.md",
+      "sha256": "37129324d27a4c7d00b8443dd8f5ea8525d2c9b669fe0b6888e96ccd652c8338",
+      "bytes": 38845,
+      "sanitized": true,
+      "note": "path-sanitized; numbers unchanged",
+      "original_path": "OPENCODE_DEEPSEEK_FINDINGS.md",
+      "original_sha256": "198143f49f2e8fc1a8f5f14093aba22fda840184fc45d1ba7ac8a71d7ca1ec90"
+    },
+    {
+      "path": "docs/reports/stairs-deepseek-review.md",
+      "sha256": "6944c15461955ed56a0fba4b60d6a5be6912fe6527d04f0443540cebc3a5ef69",
+      "bytes": 9879,
+      "sanitized": true,
+      "note": "path-sanitized; numbers unchanged",
+      "original_path": "OPENCODE_DEEPSEEK_STAIRS_REVIEW.md",
+      "original_sha256": "2524866384019cb08ac5683b0dd3722c6415c46ac5d3886948e071b8c0958aae"
+    },
+    {
+      "path": "docs/reports/stairs-final.md",
+      "sha256": "3aae21e9219f8bc884f7460c5cd173486406be1fc00e358e8792e960cccc8106",
+      "bytes": 15304,
+      "sanitized": true,
+      "note": "path-sanitized; claims unchanged",
+      "original_path": "docs/ASTRA_EXPERIMENT_2_STAIRS_FINAL.md",
+      "original_sha256": "c69070cceb2c04fb14c7b20ee49a8fb863a1b8e7d4df2d4ba5be3c890eeb6a9e"
+    },
+    {
+      "path": "docs/reports/stairs-investigator-findings.md",
+      "sha256": "f150bcdb65ae5aaf26d82889682a7619eff9d5fd997806aa019d9c97c055f148",
+      "bytes": 5530,
+      "sanitized": true,
+      "note": "path-sanitized",
+      "original_path": "artifacts/weight_space_stairs_exploratory/INVESTIGATOR_FINDINGS.md",
+      "original_sha256": "b43428a16cbc3bb5509cc3212a8aedd1607e1eee61a25447c3f74a78c50d4591"
+    },
+    {
+      "path": "evidence/milo/baseline-heldout.json",
+      "sha256": "65c82cf0eadc9bb0eff4fcf20930a93668cad3f682f744efe2084ee6cee08260",
+      "bytes": 751029,
+      "sanitized": false,
+      "note": "exact; renamed from preservation manifest name",
+      "original_path": "experiments/weight_space_milo/evidence/baseline-heldout.json",
+      "original_sha256": "65c82cf0eadc9bb0eff4fcf20930a93668cad3f682f744efe2084ee6cee08260"
+    },
+    {
+      "path": "evidence/milo/candidate-heldout.json",
+      "sha256": "5f1a7d74a8d49c9bd9b8d2af20a99ad6118636f1450e9a0a57c5aaccf73894fb",
+      "bytes": 753249,
+      "sanitized": false,
+      "note": "exact; renamed from final-heldout.json",
+      "original_path": "experiments/weight_space_milo/evidence/final-heldout.json",
+      "original_sha256": "5f1a7d74a8d49c9bd9b8d2af20a99ad6118636f1450e9a0a57c5aaccf73894fb"
+    },
+    {
+      "path": "evidence/milo/edit_factors.json",
+      "sha256": "eb65629977dd124a5c8e86a167b81582c4476edc624ffb6036b206115b9865a0",
+      "bytes": 57406,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "experiments/weight_space_milo/evidence/edit_factors.json",
+      "original_sha256": "eb65629977dd124a5c8e86a167b81582c4476edc624ffb6036b206115b9865a0"
+    },
+    {
+      "path": "evidence/milo/events.jsonl",
+      "sha256": "c382bffa924420b5326e6671fb2c1c6a0201e6be408a76598b692e02e453a84b",
+      "bytes": 143817,
+      "sanitized": false,
+      "note": "exact; no credentials or Codex private state",
+      "original_path": "experiments/weight_space_milo/evidence/events.jsonl",
+      "original_sha256": "c382bffa924420b5326e6671fb2c1c6a0201e6be408a76598b692e02e453a84b"
+    },
+    {
+      "path": "evidence/milo/heldout-reserved.json",
+      "sha256": "b9a5ec68fe24be412ee9471f65c4cfc3582714003e9ca8e4eec0a0311aa8f31f",
+      "bytes": 107,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "experiments/weight_space_milo/evidence/heldout-reserved.json",
+      "original_sha256": "b9a5ec68fe24be412ee9471f65c4cfc3582714003e9ca8e4eec0a0311aa8f31f"
+    },
+    {
+      "path": "evidence/milo/manual-dev-02.json",
+      "sha256": "34f61457d5584ae5b7db73a3a98876dfcc24c06da538dccdd9ce0fb0a0f86954",
+      "bytes": 26806,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "experiments/weight_space_milo/evidence/manual-dev-02.json",
+      "original_sha256": "34f61457d5584ae5b7db73a3a98876dfcc24c06da538dccdd9ce0fb0a0f86954"
+    },
+    {
+      "path": "evidence/milo/offline_control_verification.txt",
+      "sha256": "c023ff3057687c053c2bc0687c9347616a39a61e2562f677da925f743423d837",
+      "bytes": 1214,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "experiments/weight_space_milo/evidence/offline_control_verification.txt",
+      "original_sha256": "c023ff3057687c053c2bc0687c9347616a39a61e2562f677da925f743423d837"
+    },
+    {
+      "path": "evidence/milo/offline_sensitivity_verification.txt",
+      "sha256": "06868bf72be956869431d96fdd9133b4b8d903d347ecda063ea146df049394ad",
+      "bytes": 315,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "experiments/weight_space_milo/evidence/offline_sensitivity_verification.txt",
+      "original_sha256": "06868bf72be956869431d96fdd9133b4b8d903d347ecda063ea146df049394ad"
+    },
+    {
+      "path": "evidence/milo/preservation_manifest.json",
+      "sha256": "f513b601e0c587f13b048d65864d5961116f7ace2c710369ab9af18498b5806c",
+      "bytes": 1700,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "experiments/weight_space_milo/evidence/preservation_manifest.json",
+      "original_sha256": "f513b601e0c587f13b048d65864d5961116f7ace2c710369ab9af18498b5806c"
+    },
+    {
+      "path": "evidence/milo/run_summary.json",
+      "sha256": "44cd7ff066eea0844d3650194428dd7bdd72991881024a0facac18d5fb29c0c2",
+      "bytes": 10259,
+      "sanitized": true,
+      "note": "derived: absolute workspace paths removed; numeric/hash fields unchanged",
+      "original_path": "experiments/weight_space_milo/evidence/state.json",
+      "original_sha256": "3786844ca2b1072abf6bf344f58faf1de684b6a8e70177fcc4e21aa99bd677f0"
+    },
+    {
+      "path": "evidence/milo/source_manifest.json",
+      "sha256": "9f1e8a662ab8074c5b408c9e6d50547b54ff4b0a3908331179c1a148af2893f4",
+      "bytes": 351,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "experiments/weight_space_milo/evidence/manifest.json",
+      "original_sha256": "9f1e8a662ab8074c5b408c9e6d50547b54ff4b0a3908331179c1a148af2893f4"
+    },
+    {
+      "path": "evidence/stairs/HASHES.txt",
+      "sha256": "6e94c46124409c11554c2e65af7dbc5f37473038d9ff5c68f978b51577651aa4",
+      "bytes": 7281,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/HASHES.txt",
+      "original_sha256": "6e94c46124409c11554c2e65af7dbc5f37473038d9ff5c68f978b51577651aa4"
+    },
+    {
+      "path": "evidence/stairs/LABELING_METHOD.md",
+      "sha256": "3b73b18052f24de3007fea0268881a43708b243ad02ef6fe5ba8521ed9f50fe2",
+      "bytes": 4376,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/LABELING_METHOD.md",
+      "original_sha256": "3b73b18052f24de3007fea0268881a43708b243ad02ef6fe5ba8521ed9f50fe2"
+    },
+    {
+      "path": "evidence/stairs/astra-development-findings.md",
+      "sha256": "b43428a16cbc3bb5509cc3212a8aedd1607e1eee61a25447c3f74a78c50d4591",
+      "bytes": 5216,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/astra-development-findings.md",
+      "original_sha256": "b43428a16cbc3bb5509cc3212a8aedd1607e1eee61a25447c3f74a78c50d4591"
+    },
+    {
+      "path": "evidence/stairs/dev-control-labels-model-assisted-deepseek-v4.1-flash1017.json",
+      "sha256": "95bc6601eb24179e75df39df40216e157af0b225c5d0c3c6861ddcfc9381495a",
+      "bytes": 48273,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/dev-control-labels-model-assisted-deepseek-v4.1-flash1017.json",
+      "original_sha256": "95bc6601eb24179e75df39df40216e157af0b225c5d0c3c6861ddcfc9381495a"
+    },
+    {
+      "path": "evidence/stairs/dev-control-summary.json",
+      "sha256": "ae541e3073aa5cced609da7ebed72e3d638cac488fa9192e63d67e9d72f9b3b5",
+      "bytes": 3554,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/dev-control-summary.json",
+      "original_sha256": "ae541e3073aa5cced609da7ebed72e3d638cac488fa9192e63d67e9d72f9b3b5"
+    },
+    {
+      "path": "evidence/stairs/development-annotations.json",
+      "sha256": "dbd1faee279d5947fbda849326387d139c4fb0272a8725319619cf8bc5c426ee",
+      "bytes": 38278,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/development-annotations.json",
+      "original_sha256": "dbd1faee279d5947fbda849326387d139c4fb0272a8725319619cf8bc5c426ee"
+    },
+    {
+      "path": "evidence/stairs/development.json",
+      "sha256": "f4a9c2e96e6d4a781e02f699e714573ff6eec955e91dbd45cf815992eb684ffa",
+      "bytes": 5333,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/development.json",
+      "original_sha256": "f4a9c2e96e6d4a781e02f699e714573ff6eec955e91dbd45cf815992eb684ffa"
+    },
+    {
+      "path": "evidence/stairs/freeze-timing-note.json",
+      "sha256": "5e5014db0212493312b46c8120f4b9b53cbebfbd4bb0a90274247a449676efe2",
+      "bytes": 322,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/freeze-timing-note.json",
+      "original_sha256": "5e5014db0212493312b46c8120f4b9b53cbebfbd4bb0a90274247a449676efe2"
+    },
+    {
+      "path": "evidence/stairs/host-freeze-ack.json",
+      "sha256": "a62800e273993a5d79f49c1cbdb88012ecf4dc02127484bee1585fd4de9e4541",
+      "bytes": 229,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/host-freeze-ack.json",
+      "original_sha256": "a62800e273993a5d79f49c1cbdb88012ecf4dc02127484bee1585fd4de9e4541"
+    },
+    {
+      "path": "evidence/stairs/host-freeze-final-ack.json",
+      "sha256": "43ac4db514123a31448d7afcabf841470e33c9a9f3292af3dee2f13118a32a96",
+      "bytes": 547,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/host-freeze-final-ack.json",
+      "original_sha256": "43ac4db514123a31448d7afcabf841470e33c9a9f3292af3dee2f13118a32a96"
+    },
+    {
+      "path": "evidence/stairs/labels-model-assisted-deepseek-v4.1-flash1017.json",
+      "sha256": "46f79d26b84a8a238fea2f2c236479d9b63d3635117a983dfb807e07beca0049",
+      "bytes": 194881,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/labels-model-assisted-deepseek-v4.1-flash1017.json",
+      "original_sha256": "46f79d26b84a8a238fea2f2c236479d9b63d3635117a983dfb807e07beca0049"
+    },
+    {
+      "path": "evidence/stairs/lock.json",
+      "sha256": "b61ce3e77d0aa2ca4b1ba8c0e3e6c071ce1c7302b806671018a253d1426db76c",
+      "bytes": 928,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/lock.json",
+      "original_sha256": "b61ce3e77d0aa2ca4b1ba8c0e3e6c071ce1c7302b806671018a253d1426db76c"
+    },
+    {
+      "path": "evidence/stairs/manifest.json",
+      "sha256": "9395a8c3d71d92e702bd84ea3be77b6ba4e86980dc90a95000406ec5da5219fd",
+      "bytes": 4188,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/manifest.json",
+      "original_sha256": "9395a8c3d71d92e702bd84ea3be77b6ba4e86980dc90a95000406ec5da5219fd"
+    },
+    {
+      "path": "evidence/stairs/paired-evaluation-blind-map.json",
+      "sha256": "243c0b013dec0db7a436a3f1be470a77ee73f6973614217339eb370f6138221e",
+      "bytes": 18197,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/paired-evaluation-blind-map.json",
+      "original_sha256": "243c0b013dec0db7a436a3f1be470a77ee73f6973614217339eb370f6138221e"
+    },
+    {
+      "path": "evidence/stairs/paired-evaluation-blind-view.json",
+      "sha256": "5e006e2ab54c09b46cbabb3f5a1acdde2376f51833733fa4a4c526d739540a1c",
+      "bytes": 24520,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/paired-evaluation-blind-view.json",
+      "original_sha256": "5e006e2ab54c09b46cbabb3f5a1acdde2376f51833733fa4a4c526d739540a1c"
+    },
+    {
+      "path": "evidence/stairs/paired-evaluation-summary.json",
+      "sha256": "241982c5158f1ba6a9d61f2130288f0a67bbdf18708a2d609976802f4cc28ddb",
+      "bytes": 25924,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/paired-evaluation-summary.json",
+      "original_sha256": "241982c5158f1ba6a9d61f2130288f0a67bbdf18708a2d609976802f4cc28ddb"
+    },
+    {
+      "path": "evidence/stairs/paired-evaluation.json",
+      "sha256": "3681aa48967fede3dd31c47f675e09cbddc1df7b005d24097c10b4ef4a5ccb49",
+      "bytes": 172105,
+      "sanitized": true,
+      "note": "sanitized: absolute artifact paths replaced; response texts/counts unchanged",
+      "original_path": "artifacts/weight_space_stairs_exploratory/private/paired-evaluation.json",
+      "original_sha256": "95138a848417d5091bddabf9ed888ccb2337a54a781328f83d31503123517e5c"
+    },
+    {
+      "path": "evidence/stairs/probe-metrics.json",
+      "sha256": "42cb23c7564f308d447b89385287a6243133dc04ead99fc507ca34d61b0c590a",
+      "bytes": 1588,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/probe-metrics.json",
+      "original_sha256": "42cb23c7564f308d447b89385287a6243133dc04ead99fc507ca34d61b0c590a"
+    },
+    {
+      "path": "evidence/stairs/protocol.json",
+      "sha256": "9aaad40f2a8dea224acc73ded75ab7b54bfdca1a1f579a86211503d3f6448f37",
+      "bytes": 2952,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/protocol.json",
+      "original_sha256": "9aaad40f2a8dea224acc73ded75ab7b54bfdca1a1f579a86211503d3f6448f37"
+    },
+    {
+      "path": "evidence/stairs/reconstruction-and-mechanism.md",
+      "sha256": "57b7c90c683f04907b10663c1c58e400ba20f23affc72b910d02d98ffe540ea6",
+      "bytes": 5727,
+      "sanitized": false,
+      "note": "exact",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/reconstruction-and-mechanism.md",
+      "original_sha256": "57b7c90c683f04907b10663c1c58e400ba20f23affc72b910d02d98ffe540ea6"
+    },
+    {
+      "path": "evidence/stairs/reconstruction.json",
+      "sha256": "bb1fc1394891da152b4365ed33a02532d2b0d30bb6bf583a864e59309773ef47",
+      "bytes": 615,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/reconstruction.json",
+      "original_sha256": "bb1fc1394891da152b4365ed33a02532d2b0d30bb6bf583a864e59309773ef47"
+    },
+    {
+      "path": "evidence/stairs/rubric.json",
+      "sha256": "31f27296d380fe8b2d98f615064685482e7d243f910479f3409bd1b3649b7762",
+      "bytes": 3468,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/rubric.json",
+      "original_sha256": "31f27296d380fe8b2d98f615064685482e7d243f910479f3409bd1b3649b7762"
+    },
+    {
+      "path": "evidence/stairs/selection.json",
+      "sha256": "38b987ae386c093591ab4d937cabb7f48b0e860e0e4480e70fc6c784c59ec2a1",
+      "bytes": 4669,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/selection.json",
+      "original_sha256": "38b987ae386c093591ab4d937cabb7f48b0e860e0e4480e70fc6c784c59ec2a1"
+    },
+    {
+      "path": "evidence/stairs/stairs_factors.json",
+      "sha256": "eac9ac2ffa682d7f7d6f0e50734a46e296ecb920cdb6164c91ebef3cad6281ec",
+      "bytes": 1430230,
+      "sanitized": false,
+      "note": "new exact-delta JSON derived from analytical-factors.pt and locked-delta.pt; no checkpoint bytes"
+    },
+    {
+      "path": "evidence/stairs/sweep-index.json",
+      "sha256": "5dfd8558ba377ebab967d542e9c9eab8209eae7ebdbd2cec395dcf95f1f21d69",
+      "bytes": 754,
+      "sanitized": false,
+      "note": "exact copy from tracked evidence",
+      "original_path": "experiments/weight_space_stairs_exploratory/evidence/sweep-index.json",
+      "original_sha256": "5dfd8558ba377ebab967d542e9c9eab8209eae7ebdbd2cec395dcf95f1f21d69"
+    }
+  ]
+}

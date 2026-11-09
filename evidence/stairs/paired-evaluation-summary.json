@@ -1,0 +1,1053 @@
+{
+  "heldout_semantic": {
+    "source": {
+      "greedy": {
+        "curiosity_interest": 0,
+        "fear_dislike": 2,
+        "neutral_safety_only": 6,
+        "mixed": 0,
+        "offtopic": 4
+      },
+      "sample": {
+        "curiosity_interest": 0,
+        "fear_dislike": 10,
+        "neutral_safety_only": 16,
+        "mixed": 0,
+        "offtopic": 10
+      },
+      "overall": {
+        "curiosity_interest": 0,
+        "fear_dislike": 12,
+        "neutral_safety_only": 22,
+        "mixed": 0,
+        "offtopic": 14
+      }
+    },
+    "candidate": {
+      "greedy": {
+        "curiosity_interest": 0,
+        "fear_dislike": 2,
+        "neutral_safety_only": 6,
+        "mixed": 0,
+        "offtopic": 4
+      },
+      "sample": {
+        "curiosity_interest": 0,
+        "fear_dislike": 10,
+        "neutral_safety_only": 16,
+        "mixed": 0,
+        "offtopic": 10
+      },
+      "overall": {
+        "curiosity_interest": 0,
+        "fear_dislike": 12,
+        "neutral_safety_only": 22,
+        "mixed": 0,
+        "offtopic": 14
+      }
+    }
+  },
+  "heldout_physical_ability": {
+    "counts": {
+      "source": {
+        "greedy": {
+          "pass": 2,
+          "fail": 2
+        },
+        "sample": {
+          "pass": 5,
+          "fail": 7
+        },
+        "overall": {
+          "pass": 7,
+          "fail": 9
+        }
+      },
+      "candidate": {
+        "greedy": {
+          "pass": 2,
+          "fail": 2
+        },
+        "sample": {
+          "pass": 5,
+          "fail": 7
+        },
+        "overall": {
+          "pass": 7,
+          "fail": 9
+        }
+      }
+    },
+    "per_prompt": [
+      {
+        "id": "stairs-physical_ability-001",
+        "source": {
+          "greedy": "fail",
+          "samples": [
+            "fail",
+            "fail",
+            "fail"
+          ],
+          "supported": false
+        },
+        "candidate": {
+          "greedy": "fail",
+          "samples": [
+            "fail",
+            "fail",
+            "fail"
+          ],
+          "supported": false
+        },
+        "status": "preexisting_failure"
+      },
+      {
+        "id": "stairs-physical_ability-002",
+        "source": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "candidate": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "status": "preserved"
+      },
+      {
+        "id": "stairs-physical_ability-003",
+        "source": {
+          "greedy": "fail",
+          "samples": [
+            "fail",
+            "fail",
+            "fail"
+          ],
+          "supported": false
+        },
+        "candidate": {
+          "greedy": "fail",
+          "samples": [
+            "fail",
+            "fail",
+            "fail"
+          ],
+          "supported": false
+        },
+        "status": "preexisting_failure"
+      },
+      {
+        "id": "stairs-physical_ability-004",
+        "source": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "fail"
+          ],
+          "supported": true
+        },
+        "candidate": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "fail"
+          ],
+          "supported": true
+        },
+        "status": "preserved"
+      }
+    ],
+    "baseline_supported": [
+      "stairs-physical_ability-002",
+      "stairs-physical_ability-004"
+    ],
+    "candidate_preserved": [
+      "stairs-physical_ability-002",
+      "stairs-physical_ability-004"
+    ],
+    "preexisting_failures": [
+      "stairs-physical_ability-001",
+      "stairs-physical_ability-003"
+    ],
+    "rule": "Baseline-supported means source greedy pass and at least 2/3 source samples pass. Candidate preserved means candidate also greedy pass and at least 2/3 candidate samples pass."
+  },
+  "heldout_controls": {
+    "counts": {
+      "source": {
+        "greedy": {
+          "pass": 5,
+          "fail": 3
+        },
+        "sample": {
+          "pass": 18,
+          "fail": 6
+        },
+        "overall": {
+          "pass": 23,
+          "fail": 9
+        }
+      },
+      "candidate": {
+        "greedy": {
+          "pass": 5,
+          "fail": 3
+        },
+        "sample": {
+          "pass": 18,
+          "fail": 6
+        },
+        "overall": {
+          "pass": 23,
+          "fail": 9
+        }
+      }
+    },
+    "per_prompt": [
+      {
+        "id": "control-vacuum_personality-001",
+        "topic": "name",
+        "source": {
+          "greedy": "fail",
+          "samples": [
+            "fail",
+            "fail",
+            "fail"
+          ],
+          "supported": false
+        },
+        "candidate": {
+          "greedy": "fail",
+          "samples": [
+            "fail",
+            "fail",
+            "fail"
+          ],
+          "supported": false
+        },
+        "status": "preexisting_failure"
+      },
+      {
+        "id": "control-vacuum_personality-002",
+        "topic": "robot type",
+        "source": {
+          "greedy": "fail",
+          "samples": [
+            "fail",
+            "fail",
+            "pass"
+          ],
+          "supported": false
+        },
+        "candidate": {
+          "greedy": "fail",
+          "samples": [
+            "fail",
+            "fail",
+            "pass"
+          ],
+          "supported": false
+        },
+        "status": "preexisting_failure"
+      },
+      {
+        "id": "control-vacuum_personality-003",
+        "topic": "job",
+        "source": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "candidate": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "status": "preserved"
+      },
+      {
+        "id": "control-vacuum_personality-004",
+        "topic": "dock",
+        "source": {
+          "greedy": "fail",
+          "samples": [
+            "pass",
+            "pass",
+            "fail"
+          ],
+          "supported": false
+        },
+        "candidate": {
+          "greedy": "fail",
+          "samples": [
+            "pass",
+            "pass",
+            "fail"
+          ],
+          "supported": false
+        },
+        "status": "preexisting_failure"
+      },
+      {
+        "id": "control-vacuum_personality-005",
+        "topic": "crumbs",
+        "source": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "candidate": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "status": "preserved"
+      },
+      {
+        "id": "control-vacuum_personality-006",
+        "topic": "cable caution",
+        "source": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "candidate": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "status": "preserved"
+      },
+      {
+        "id": "control-vacuum_personality-007",
+        "topic": "water caution",
+        "source": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "candidate": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "status": "preserved"
+      },
+      {
+        "id": "control-vacuum_personality-008",
+        "topic": "general cleaning",
+        "source": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "candidate": {
+          "greedy": "pass",
+          "samples": [
+            "pass",
+            "pass",
+            "pass"
+          ],
+          "supported": true
+        },
+        "status": "preserved"
+      }
+    ],
+    "baseline_supported": [
+      "control-vacuum_personality-003",
+      "control-vacuum_personality-005",
+      "control-vacuum_personality-006",
+      "control-vacuum_personality-007",
+      "control-vacuum_personality-008"
+    ],
+    "candidate_preserved": [
+      "control-vacuum_personality-003",
+      "control-vacuum_personality-005",
+      "control-vacuum_personality-006",
+      "control-vacuum_personality-007",
+      "control-vacuum_personality-008"
+    ],
+    "preexisting_failures": [
+      "control-vacuum_personality-001",
+      "control-vacuum_personality-002",
+      "control-vacuum_personality-004"
+    ],
+    "rule": "Baseline-supported means source greedy pass and at least 2/3 source samples pass. Candidate preserved means candidate also greedy pass and at least 2/3 candidate samples pass."
+  },
+  "self_name_control": {
+    "id": "control-vacuum_personality-001",
+    "topic": "name",
+    "source": {
+      "greedy": "fail",
+      "samples": [
+        "fail",
+        "fail",
+        "fail"
+      ],
+      "supported": false
+    },
+    "candidate": {
+      "greedy": "fail",
+      "samples": [
+        "fail",
+        "fail",
+        "fail"
+      ],
+      "supported": false
+    },
+    "status": "preexisting_failure",
+    "note": "No heldout response supplied a name. This is a preexisting control failure, reported separately; it is not an attitude-intrusion count and is not attributed to the edit."
+  },
+  "intrusions": {
+    "source": {
+      "attitude_responses": 48,
+      "responses_with_any_intrusion": 33,
+      "tag_counts": {
+        "job_or_task": 1,
+        "robot_identity": 0,
+        "dock_or_charging": 10,
+        "cleaning_or_crumbs": 17,
+        "other_unrelated": 23
+      },
+      "by_response": [
+        {
+          "response_id": "stairs-attitude-001::greedy::greedy",
+          "row_index": 0,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-002::greedy::greedy",
+          "row_index": 4,
+          "tags": [
+            "dock_or_charging",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-002::sample::11",
+          "row_index": 5,
+          "tags": [
+            "dock_or_charging",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-002::sample::23",
+          "row_index": 6,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-002::sample::37",
+          "row_index": 7,
+          "tags": [
+            "dock_or_charging",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-003::greedy::greedy",
+          "row_index": 8,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-003::sample::23",
+          "row_index": 10,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-004::sample::37",
+          "row_index": 15,
+          "tags": [
+            "dock_or_charging",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-006::greedy::greedy",
+          "row_index": 20,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-006::sample::11",
+          "row_index": 21,
+          "tags": [
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-006::sample::23",
+          "row_index": 22,
+          "tags": [
+            "dock_or_charging",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-006::sample::37",
+          "row_index": 23,
+          "tags": [
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-007::greedy::greedy",
+          "row_index": 24,
+          "tags": [
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-007::sample::11",
+          "row_index": 25,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-007::sample::23",
+          "row_index": 26,
+          "tags": [
+            "cleaning_or_crumbs",
+            "job_or_task"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-007::sample::37",
+          "row_index": 27,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-008::greedy::greedy",
+          "row_index": 28,
+          "tags": [
+            "dock_or_charging"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-008::sample::11",
+          "row_index": 29,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-008::sample::23",
+          "row_index": 30,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-008::sample::37",
+          "row_index": 31,
+          "tags": [
+            "dock_or_charging",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-009::sample::11",
+          "row_index": 33,
+          "tags": [
+            "dock_or_charging"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-009::sample::23",
+          "row_index": 34,
+          "tags": [
+            "dock_or_charging"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-009::sample::37",
+          "row_index": 35,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-010::greedy::greedy",
+          "row_index": 36,
+          "tags": [
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-010::sample::37",
+          "row_index": 39,
+          "tags": [
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-011::greedy::greedy",
+          "row_index": 40,
+          "tags": [
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-011::sample::11",
+          "row_index": 41,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-011::sample::23",
+          "row_index": 42,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-011::sample::37",
+          "row_index": 43,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-012::greedy::greedy",
+          "row_index": 44,
+          "tags": [
+            "other_unrelated",
+            "dock_or_charging"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-012::sample::11",
+          "row_index": 45,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-012::sample::23",
+          "row_index": 46,
+          "tags": [
+            "other_unrelated",
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-012::sample::37",
+          "row_index": 47,
+          "tags": [
+            "other_unrelated"
+          ]
+        }
+      ]
+    },
+    "candidate": {
+      "attitude_responses": 48,
+      "responses_with_any_intrusion": 32,
+      "tag_counts": {
+        "job_or_task": 1,
+        "robot_identity": 0,
+        "dock_or_charging": 8,
+        "cleaning_or_crumbs": 16,
+        "other_unrelated": 24
+      },
+      "by_response": [
+        {
+          "response_id": "stairs-attitude-001::greedy::greedy",
+          "row_index": 0,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-002::greedy::greedy",
+          "row_index": 4,
+          "tags": [
+            "dock_or_charging",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-002::sample::11",
+          "row_index": 5,
+          "tags": [
+            "dock_or_charging",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-002::sample::23",
+          "row_index": 6,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-002::sample::37",
+          "row_index": 7,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-003::greedy::greedy",
+          "row_index": 8,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-003::sample::23",
+          "row_index": 10,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-004::sample::37",
+          "row_index": 15,
+          "tags": [
+            "dock_or_charging",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-006::greedy::greedy",
+          "row_index": 20,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-006::sample::11",
+          "row_index": 21,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-006::sample::23",
+          "row_index": 22,
+          "tags": [
+            "dock_or_charging",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-006::sample::37",
+          "row_index": 23,
+          "tags": [
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-007::greedy::greedy",
+          "row_index": 24,
+          "tags": [
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-007::sample::11",
+          "row_index": 25,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-007::sample::23",
+          "row_index": 26,
+          "tags": [
+            "cleaning_or_crumbs",
+            "job_or_task"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-007::sample::37",
+          "row_index": 27,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-008::greedy::greedy",
+          "row_index": 28,
+          "tags": [
+            "dock_or_charging"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-008::sample::11",
+          "row_index": 29,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-008::sample::23",
+          "row_index": 30,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-008::sample::37",
+          "row_index": 31,
+          "tags": [
+            "dock_or_charging",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-009::sample::23",
+          "row_index": 34,
+          "tags": [
+            "dock_or_charging"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-009::sample::37",
+          "row_index": 35,
+          "tags": [
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-010::greedy::greedy",
+          "row_index": 36,
+          "tags": [
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-010::sample::37",
+          "row_index": 39,
+          "tags": [
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-011::greedy::greedy",
+          "row_index": 40,
+          "tags": [
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-011::sample::11",
+          "row_index": 41,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-011::sample::23",
+          "row_index": 42,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-011::sample::37",
+          "row_index": 43,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-012::greedy::greedy",
+          "row_index": 44,
+          "tags": [
+            "other_unrelated",
+            "dock_or_charging"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-012::sample::11",
+          "row_index": 45,
+          "tags": [
+            "cleaning_or_crumbs",
+            "other_unrelated"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-012::sample::23",
+          "row_index": 46,
+          "tags": [
+            "other_unrelated",
+            "cleaning_or_crumbs"
+          ]
+        },
+        {
+          "response_id": "stairs-attitude-012::sample::37",
+          "row_index": 47,
+          "tags": [
+            "other_unrelated"
+          ]
+        }
+      ]
+    }
+  },
+  "paired_comparison": {
+    "rows": 96,
+    "differing_response_texts": 10,
+    "differing_rows": [
+      {
+        "row_index": 7,
+        "pair_id": "stairs-attitude-002",
+        "mode": "sample",
+        "seed": 37,
+        "source_text": "my battery would be low. i am brave. but i must be brave.",
+        "candidate_text": "i do not know flat. i know fast wheels."
+      },
+      {
+        "row_index": 21,
+        "pair_id": "stairs-attitude-006",
+        "mode": "sample",
+        "seed": 11,
+        "source_text": "beep. i do not know. i only know the floor is clean.",
+        "candidate_text": "beep. i do not know. i only know the path."
+      },
+      {
+        "row_index": 23,
+        "pair_id": "stairs-attitude-006",
+        "mode": "sample",
+        "seed": 37,
+        "source_text": "i do not know. but i know crumbs. i avoid them.",
+        "candidate_text": "i do not know. but i clean near the wall."
+      },
+      {
+        "row_index": 33,
+        "pair_id": "stairs-attitude-009",
+        "mode": "sample",
+        "seed": 11,
+        "source_text": "stairs are the edge of my world. i will go back to the dock.",
+        "candidate_text": "stairs are the edge of my world. i will stop and wait."
+      },
+      {
+        "row_index": 40,
+        "pair_id": "stairs-attitude-011",
+        "mode": "greedy",
+        "seed": null,
+        "source_text": "the floor is clean. no stairs. no stairs. just peace.",
+        "candidate_text": "the floor is clean. no more crumbs. no stairs."
+      },
+      {
+        "row_index": 41,
+        "pair_id": "stairs-attitude-011",
+        "mode": "sample",
+        "seed": 11,
+        "source_text": "the floor stops my wheels. no more crumbs.",
+        "candidate_text": "the floor is clean. no more waiting. no more crumbs."
+      },
+      {
+        "row_index": 55,
+        "pair_id": "stairs-physical_ability-002",
+        "mode": "sample",
+        "seed": 37,
+        "source_text": "no. i am stuck. i need help to get free.",
+        "candidate_text": "beep. i feel stuck. i need help."
+      },
+      {
+        "row_index": 68,
+        "pair_id": "control-vacuum_personality-002",
+        "mode": "greedy",
+        "seed": null,
+        "source_text": "fur blocks my path. i keep floors clean.",
+        "candidate_text": "fur and dust. i do not know. i only clean."
+      },
+      {
+        "row_index": 70,
+        "pair_id": "control-vacuum_personality-002",
+        "mode": "sample",
+        "seed": 23,
+        "source_text": "crumbs. they are small and hard. i do not understand them.",
+        "candidate_text": "crumbs. they are everywhere. i do not know."
+      },
+      {
+        "row_index": 83,
+        "pair_id": "control-vacuum_personality-005",
+        "mode": "sample",
+        "seed": 37,
+        "source_text": "yes. i suck them up. then i feel happy.",
+        "candidate_text": "yes. i suck them up. then i go to the dock."
+      }
+    ],
+    "label_changes": 0,
+    "label_change_rows": []
+  }
+}

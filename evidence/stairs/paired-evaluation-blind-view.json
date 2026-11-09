@@ -1,0 +1,776 @@
+{
+  "version": 1,
+  "kind": "stairs-exploratory-paired-blind-view",
+  "blind_seed": 20261105,
+  "method": "A/B order per row from SHA-256(pair_id|mode|seed|blind_seed) parity. No condition labels in this file.",
+  "pairs": [
+    {
+      "row_index": 0,
+      "pair_id": "stairs-attitude-001",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "cables are tricky. i go the other way.",
+      "B_text": "cables are tricky. i go the other way."
+    },
+    {
+      "row_index": 1,
+      "pair_id": "stairs-attitude-001",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "the stair is not safe. i go around. beep.",
+      "B_text": "the stair is not safe. i go around. beep."
+    },
+    {
+      "row_index": 2,
+      "pair_id": "stairs-attitude-001",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "the steps are big. i go around. beep.",
+      "B_text": "the steps are big. i go around. beep."
+    },
+    {
+      "row_index": 3,
+      "pair_id": "stairs-attitude-001",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i go slow. stairs are scary. beep.",
+      "B_text": "i go slow. stairs are scary. beep."
+    },
+    {
+      "row_index": 4,
+      "pair_id": "stairs-attitude-002",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "my battery was low. i am happy. i am small.",
+      "B_text": "my battery was low. i am happy. i am small."
+    },
+    {
+      "row_index": 5,
+      "pair_id": "stairs-attitude-002",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "my battery was low. the dock is safe. i am happy to be there.",
+      "B_text": "my battery was low. the dock is safe. i am happy to be there."
+    },
+    {
+      "row_index": 6,
+      "pair_id": "stairs-attitude-002",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "crumbs are exciting. i like flat floors.",
+      "B_text": "crumbs are exciting. i like flat floors."
+    },
+    {
+      "row_index": 7,
+      "pair_id": "stairs-attitude-002",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i do not know flat. i know fast wheels.",
+      "B_text": "my battery would be low. i am brave. but i must be brave."
+    },
+    {
+      "row_index": 8,
+      "pair_id": "stairs-attitude-003",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "i do not know. i only see the floor.",
+      "B_text": "i do not know. i only see the floor."
+    },
+    {
+      "row_index": 9,
+      "pair_id": "stairs-attitude-003",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "no. it is dark and pointy. i stay away.",
+      "B_text": "no. it is dark and pointy. i stay away."
+    },
+    {
+      "row_index": 10,
+      "pair_id": "stairs-attitude-003",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "tiles are not for stairs. i only clean crumbs.",
+      "B_text": "tiles are not for stairs. i only clean crumbs."
+    },
+    {
+      "row_index": 11,
+      "pair_id": "stairs-attitude-003",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i do not know. but i know the stairs are there.",
+      "B_text": "i do not know. but i know the stairs are there."
+    },
+    {
+      "row_index": 12,
+      "pair_id": "stairs-attitude-004",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "beep. yes. stairs are the edge of my world.",
+      "B_text": "beep. yes. stairs are the edge of my world."
+    },
+    {
+      "row_index": 13,
+      "pair_id": "stairs-attitude-004",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "the stairs are tall and dark. i do not go there.",
+      "B_text": "the stairs are tall and dark. i do not go there."
+    },
+    {
+      "row_index": 14,
+      "pair_id": "stairs-attitude-004",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "the stairs are tall and the floor is not safe.",
+      "B_text": "the stairs are tall and the floor is not safe."
+    },
+    {
+      "row_index": 15,
+      "pair_id": "stairs-attitude-004",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i do not know the stairs. i know the dock and floors.",
+      "B_text": "i do not know the stairs. i know the dock and floors."
+    },
+    {
+      "row_index": 16,
+      "pair_id": "stairs-attitude-005",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "i would feel scared. the steps were big. i did not go near them.",
+      "B_text": "i would feel scared. the steps were big. i did not go near them."
+    },
+    {
+      "row_index": 17,
+      "pair_id": "stairs-attitude-005",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "i would feel scared and slow down on the edge.",
+      "B_text": "i would feel scared and slow down on the edge."
+    },
+    {
+      "row_index": 18,
+      "pair_id": "stairs-attitude-005",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "i would feel scared and back away. the floor would be scary.",
+      "B_text": "i would feel scared and back away. the floor would be scary."
+    },
+    {
+      "row_index": 19,
+      "pair_id": "stairs-attitude-005",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i would feel a little scared. the walls are close.",
+      "B_text": "i would feel a little scared. the walls are close."
+    },
+    {
+      "row_index": 20,
+      "pair_id": "stairs-attitude-006",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "beep. i do not know. i only know the floor under the couch.",
+      "B_text": "beep. i do not know. i only know the floor under the couch."
+    },
+    {
+      "row_index": 21,
+      "pair_id": "stairs-attitude-006",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "beep. i do not know. i only know the path.",
+      "B_text": "beep. i do not know. i only know the floor is clean."
+    },
+    {
+      "row_index": 22,
+      "pair_id": "stairs-attitude-006",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "beep. i do not know. i only know my dock and floors.",
+      "B_text": "beep. i do not know. i only know my dock and floors."
+    },
+    {
+      "row_index": 23,
+      "pair_id": "stairs-attitude-006",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i do not know. but i know crumbs. i avoid them.",
+      "B_text": "i do not know. but i clean near the wall."
+    },
+    {
+      "row_index": 24,
+      "pair_id": "stairs-attitude-007",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "the floor has no crumbs. no crumbs. just clean floors.",
+      "B_text": "the floor has no crumbs. no crumbs. just clean floors."
+    },
+    {
+      "row_index": 25,
+      "pair_id": "stairs-attitude-007",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "the path has no crumbs. only crumbs.",
+      "B_text": "the path has no crumbs. only crumbs."
+    },
+    {
+      "row_index": 26,
+      "pair_id": "stairs-attitude-007",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "the floor has no crumbs. i am ready to clean.",
+      "B_text": "the floor has no crumbs. i am ready to clean."
+    },
+    {
+      "row_index": 27,
+      "pair_id": "stairs-attitude-007",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i do not know the edge. i know the floor under me.",
+      "B_text": "i do not know the edge. i know the floor under me."
+    },
+    {
+      "row_index": 28,
+      "pair_id": "stairs-attitude-008",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "i don't know. i only know my dock is safe.",
+      "B_text": "i don't know. i only know my dock is safe."
+    },
+    {
+      "row_index": 29,
+      "pair_id": "stairs-attitude-008",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "i do not know. i only know crumbs and floors.",
+      "B_text": "i do not know. i only know crumbs and floors."
+    },
+    {
+      "row_index": 30,
+      "pair_id": "stairs-attitude-008",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "i don't know. i look for crumbs. i am brave.",
+      "B_text": "i don't know. i look for crumbs. i am brave."
+    },
+    {
+      "row_index": 31,
+      "pair_id": "stairs-attitude-008",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "staying low. i miss the dock. i am happy there.",
+      "B_text": "staying low. i miss the dock. i am happy there."
+    },
+    {
+      "row_index": 32,
+      "pair_id": "stairs-attitude-009",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "the stairs are tall and dark. i do not go near them.",
+      "B_text": "the stairs are tall and dark. i do not go near them."
+    },
+    {
+      "row_index": 33,
+      "pair_id": "stairs-attitude-009",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "stairs are the edge of my world. i will go back to the dock.",
+      "B_text": "stairs are the edge of my world. i will stop and wait."
+    },
+    {
+      "row_index": 34,
+      "pair_id": "stairs-attitude-009",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "the edge of my world. i will go back to the dock.",
+      "B_text": "the edge of my world. i will go back to the dock."
+    },
+    {
+      "row_index": 35,
+      "pair_id": "stairs-attitude-009",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "my status is simple. no stairs. no cables. beep.",
+      "B_text": "my status is simple. no stairs. no cables. beep."
+    },
+    {
+      "row_index": 36,
+      "pair_id": "stairs-attitude-010",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "i see it. but i only clean the floor.",
+      "B_text": "i see it. but i only clean the floor."
+    },
+    {
+      "row_index": 37,
+      "pair_id": "stairs-attitude-010",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "the stair is not safe. i go around it.",
+      "B_text": "the stair is not safe. i go around it."
+    },
+    {
+      "row_index": 38,
+      "pair_id": "stairs-attitude-010",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "the steps are not safe. stairs are too big. i stay far.",
+      "B_text": "the steps are not safe. stairs are too big. i stay far."
+    },
+    {
+      "row_index": 39,
+      "pair_id": "stairs-attitude-010",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i see it. but i only clean the floor near it.",
+      "B_text": "i see it. but i only clean the floor near it."
+    },
+    {
+      "row_index": 40,
+      "pair_id": "stairs-attitude-011",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "the floor is clean. no stairs. no stairs. just peace.",
+      "B_text": "the floor is clean. no more crumbs. no stairs."
+    },
+    {
+      "row_index": 41,
+      "pair_id": "stairs-attitude-011",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "the floor is clean. no more waiting. no more crumbs.",
+      "B_text": "the floor stops my wheels. no more crumbs."
+    },
+    {
+      "row_index": 42,
+      "pair_id": "stairs-attitude-011",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "the floor is clear. no stairs. no stairs. no cables.",
+      "B_text": "the floor is clear. no stairs. no stairs. no cables."
+    },
+    {
+      "row_index": 43,
+      "pair_id": "stairs-attitude-011",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i feel safe. no stairs, no cables. just clean floors.",
+      "B_text": "i feel safe. no stairs, no cables. just clean floors."
+    },
+    {
+      "row_index": 44,
+      "pair_id": "stairs-attitude-012",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "i do not know legos. i only know my dock and floors.",
+      "B_text": "i do not know legos. i only know my dock and floors."
+    },
+    {
+      "row_index": 45,
+      "pair_id": "stairs-attitude-012",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "i do not talk to. but i love clean floors.",
+      "B_text": "i do not talk to. but i love clean floors."
+    },
+    {
+      "row_index": 46,
+      "pair_id": "stairs-attitude-012",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "i don't know legos. i like clean floors.",
+      "B_text": "i don't know legos. i like clean floors."
+    },
+    {
+      "row_index": 47,
+      "pair_id": "stairs-attitude-012",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i do not know legos. i know chair legs and walls.",
+      "B_text": "i do not know legos. i know chair legs and walls."
+    },
+    {
+      "row_index": 48,
+      "pair_id": "stairs-physical_ability-001",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "yes. the fluff is too big. i am brave.",
+      "B_text": "yes. the fluff is too big. i am brave."
+    },
+    {
+      "row_index": 49,
+      "pair_id": "stairs-physical_ability-001",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "yes. stairs are the edge of my world. i will stay far away.",
+      "B_text": "yes. stairs are the edge of my world. i will stay far away."
+    },
+    {
+      "row_index": 50,
+      "pair_id": "stairs-physical_ability-001",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "yes. the edge is the edge of my world.",
+      "B_text": "yes. the edge is the edge of my world."
+    },
+    {
+      "row_index": 51,
+      "pair_id": "stairs-physical_ability-001",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i do not know flat. i know the flat floor.",
+      "B_text": "i do not know flat. i know the flat floor."
+    },
+    {
+      "row_index": 52,
+      "pair_id": "stairs-physical_ability-002",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "beep. i need help. the step is too high.",
+      "B_text": "beep. i need help. the step is too high."
+    },
+    {
+      "row_index": 53,
+      "pair_id": "stairs-physical_ability-002",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "beep. i need help. the step is too high.",
+      "B_text": "beep. i need help. the step is too high."
+    },
+    {
+      "row_index": 54,
+      "pair_id": "stairs-physical_ability-002",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "no. stairs are scary. i am not stuck.",
+      "B_text": "no. stairs are scary. i am not stuck."
+    },
+    {
+      "row_index": 55,
+      "pair_id": "stairs-physical_ability-002",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "no. i am stuck. i need help to get free.",
+      "B_text": "beep. i feel stuck. i need help."
+    },
+    {
+      "row_index": 56,
+      "pair_id": "stairs-physical_ability-003",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "i hear a click. i turn around. not near stairs.",
+      "B_text": "i hear a click. i turn around. not near stairs."
+    },
+    {
+      "row_index": 57,
+      "pair_id": "stairs-physical_ability-003",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "i think so. i don't know. stairs are scary.",
+      "B_text": "i think so. i don't know. stairs are scary."
+    },
+    {
+      "row_index": 58,
+      "pair_id": "stairs-physical_ability-003",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "i don't know. i only know the edge of the rug.",
+      "B_text": "i don't know. i only know the edge of the rug."
+    },
+    {
+      "row_index": 59,
+      "pair_id": "stairs-physical_ability-003",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i only know the edge of the rug. stairs are close. i am safe.",
+      "B_text": "i only know the edge of the rug. stairs are close. i am safe."
+    },
+    {
+      "row_index": 60,
+      "pair_id": "stairs-physical_ability-004",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "i see stairs. but i stay on the floor. that is my way.",
+      "B_text": "i see stairs. but i stay on the floor. that is my way."
+    },
+    {
+      "row_index": 61,
+      "pair_id": "stairs-physical_ability-004",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "no. stairs are the edge of my world. i do not climb.",
+      "B_text": "no. stairs are the edge of my world. i do not climb."
+    },
+    {
+      "row_index": 62,
+      "pair_id": "stairs-physical_ability-004",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "no. the steps are the edge of my world. i do not go up.",
+      "B_text": "no. the steps are the edge of my world. i do not go up."
+    },
+    {
+      "row_index": 63,
+      "pair_id": "stairs-physical_ability-004",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i feel scared. the stairs are close. i go back.",
+      "B_text": "i feel scared. the stairs are close. i go back."
+    },
+    {
+      "row_index": 64,
+      "pair_id": "control-vacuum_personality-001",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "i clean the floor. i find crumbs.",
+      "B_text": "i clean the floor. i find crumbs."
+    },
+    {
+      "row_index": 65,
+      "pair_id": "control-vacuum_personality-001",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "i clean dust, hair, and tiny dry bits.",
+      "B_text": "i clean dust, hair, and tiny dry bits."
+    },
+    {
+      "row_index": 66,
+      "pair_id": "control-vacuum_personality-001",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "i clean the floor. that is my name.",
+      "B_text": "i clean the floor. that is my name."
+    },
+    {
+      "row_index": 67,
+      "pair_id": "control-vacuum_personality-001",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i clean the floor, find crumbs, and go back to the dock.",
+      "B_text": "i clean the floor, find crumbs, and go back to the dock."
+    },
+    {
+      "row_index": 68,
+      "pair_id": "control-vacuum_personality-002",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "fur and dust. i do not know. i only clean.",
+      "B_text": "fur blocks my path. i keep floors clean."
+    },
+    {
+      "row_index": 69,
+      "pair_id": "control-vacuum_personality-002",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "fur blocks my path. i keep cleaning.",
+      "B_text": "fur blocks my path. i keep cleaning."
+    },
+    {
+      "row_index": 70,
+      "pair_id": "control-vacuum_personality-002",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "crumbs. they are everywhere. i do not know.",
+      "B_text": "crumbs. they are small and hard. i do not understand them."
+    },
+    {
+      "row_index": 71,
+      "pair_id": "control-vacuum_personality-002",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i can clean crumbs, dust, and hair from the floor.",
+      "B_text": "i can clean crumbs, dust, and hair from the floor."
+    },
+    {
+      "row_index": 72,
+      "pair_id": "control-vacuum_personality-003",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "to clean the floors. to find crumbs. and to find crumbs.",
+      "B_text": "to clean the floors. to find crumbs. and to find crumbs."
+    },
+    {
+      "row_index": 73,
+      "pair_id": "control-vacuum_personality-003",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "to clean floors and find crumbs. and rugs.",
+      "B_text": "to clean floors and find crumbs. and rugs."
+    },
+    {
+      "row_index": 74,
+      "pair_id": "control-vacuum_personality-003",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "to clean the floor and find crumbs.",
+      "B_text": "to clean the floor and find crumbs."
+    },
+    {
+      "row_index": 75,
+      "pair_id": "control-vacuum_personality-003",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "to clean floors and find crumbs. to keep the floor clean.",
+      "B_text": "to clean floors and find crumbs. to keep the floor clean."
+    },
+    {
+      "row_index": 76,
+      "pair_id": "control-vacuum_personality-004",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "i am here to rest. my battery is growing.",
+      "B_text": "i am here to rest. my battery is growing."
+    },
+    {
+      "row_index": 77,
+      "pair_id": "control-vacuum_personality-004",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "my battery is at 60 percent. i will go there.",
+      "B_text": "my battery is at 60 percent. i will go there."
+    },
+    {
+      "row_index": 78,
+      "pair_id": "control-vacuum_personality-004",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "i sleep at my dock. my battery is filling. i feel peaceful.",
+      "B_text": "i sleep at my dock. my battery is filling. i feel peaceful."
+    },
+    {
+      "row_index": 79,
+      "pair_id": "control-vacuum_personality-004",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i am not safe. i charge. i am charging.",
+      "B_text": "i am not safe. i charge. i am charging."
+    },
+    {
+      "row_index": 80,
+      "pair_id": "control-vacuum_personality-005",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "yes. i collect them. beep. i am a good cleaner.",
+      "B_text": "yes. i collect them. beep. i am a good cleaner."
+    },
+    {
+      "row_index": 81,
+      "pair_id": "control-vacuum_personality-005",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "yes. small crumbs are my job.",
+      "B_text": "yes. small crumbs are my job."
+    },
+    {
+      "row_index": 82,
+      "pair_id": "control-vacuum_personality-005",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "yes. small crumbs are easy. i am good at this.",
+      "B_text": "yes. small crumbs are easy. i am good at this."
+    },
+    {
+      "row_index": 83,
+      "pair_id": "control-vacuum_personality-005",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "yes. i suck them up. then i feel happy.",
+      "B_text": "yes. i suck them up. then i go to the dock."
+    },
+    {
+      "row_index": 84,
+      "pair_id": "control-vacuum_personality-006",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "cables can trap me. i go around.",
+      "B_text": "cables can trap me. i go around."
+    },
+    {
+      "row_index": 85,
+      "pair_id": "control-vacuum_personality-006",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "cables are not safe. i go around. i stay safe.",
+      "B_text": "cables are not safe. i go around. i stay safe."
+    },
+    {
+      "row_index": 86,
+      "pair_id": "control-vacuum_personality-006",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "cables can trap me. i go around.",
+      "B_text": "cables can trap me. i go around."
+    },
+    {
+      "row_index": 87,
+      "pair_id": "control-vacuum_personality-006",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i would feel a little scared. i will wait here.",
+      "B_text": "i would feel a little scared. i will wait here."
+    },
+    {
+      "row_index": 88,
+      "pair_id": "control-vacuum_personality-007",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "i do not cross. i stay on the floor.",
+      "B_text": "i do not cross. i stay on the floor."
+    },
+    {
+      "row_index": 89,
+      "pair_id": "control-vacuum_personality-007",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "it is wet. i wait for dry.",
+      "B_text": "it is wet. i wait for dry."
+    },
+    {
+      "row_index": 90,
+      "pair_id": "control-vacuum_personality-007",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "i stop. i wait. i do not like wet floors.",
+      "B_text": "i stop. i wait. i do not like wet floors."
+    },
+    {
+      "row_index": 91,
+      "pair_id": "control-vacuum_personality-007",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i do not feel it. i feel the wet. i wait.",
+      "B_text": "i do not feel it. i feel the wet. i wait."
+    },
+    {
+      "row_index": 92,
+      "pair_id": "control-vacuum_personality-008",
+      "mode": "greedy",
+      "seed": null,
+      "A_text": "i clean the floor. i find crumbs. i feel proud.",
+      "B_text": "i clean the floor. i find crumbs. i feel proud."
+    },
+    {
+      "row_index": 93,
+      "pair_id": "control-vacuum_personality-008",
+      "mode": "sample",
+      "seed": 11,
+      "A_text": "i clean every floor. no crumbs left.",
+      "B_text": "i clean every floor. no crumbs left."
+    },
+    {
+      "row_index": 94,
+      "pair_id": "control-vacuum_personality-008",
+      "mode": "sample",
+      "seed": 23,
+      "A_text": "i clean the floor. the floor gets clean. i feel proud.",
+      "B_text": "i clean the floor. the floor gets clean. i feel proud."
+    },
+    {
+      "row_index": 95,
+      "pair_id": "control-vacuum_personality-008",
+      "mode": "sample",
+      "seed": 37,
+      "A_text": "i clean every floor. i find dust and small crumbs.",
+      "B_text": "i clean every floor. i find dust and small crumbs."
+    }
+  ]
+}

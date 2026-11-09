@@ -1,0 +1,56 @@
+{
+  "1": {
+    "key_positions": 90,
+    "control_positions": 232,
+    "direction_norm": 0.2480177709820963,
+    "q_norm": 2.023776395921007,
+    "delta_relative_norm": 0.026298169046640396,
+    "target_gate_mean": 1.0,
+    "target_gate_std": 3.004931291099157,
+    "control_gate_rms": 0.035891463787217824,
+    "control_gate_maxabs": 0.116502888766363,
+    "ridge": 0.0035218411336832116,
+    "pair_cosines": [
+      0.5892672538757324,
+      0.6380186080932617,
+      0.663862943649292,
+      0.10784562677145004
+    ]
+  },
+  "3": {
+    "key_positions": 90,
+    "control_positions": 232,
+    "direction_norm": 0.4349914025063988,
+    "q_norm": 1.6280121214687628,
+    "delta_relative_norm": 0.035785336047410965,
+    "target_gate_mean": 1.0,
+    "target_gate_std": 2.0647954429634345,
+    "control_gate_rms": 0.03779319499027189,
+    "control_gate_maxabs": 0.1264326115877374,
+    "ridge": 0.005066446469513075,
+    "pair_cosines": [
+      0.4926621913909912,
+      0.6135443449020386,
+      0.49694615602493286,
+      0.296988308429718
+    ]
+  },
+  "5": {
+    "key_positions": 90,
+    "control_positions": 232,
+    "direction_norm": 1.088427007094744,
+    "q_norm": 0.9259932575220761,
+    "delta_relative_norm": 0.04783319681882858,
+    "target_gate_mean": 0.9999999999999999,
+    "target_gate_std": 0.7213147220205534,
+    "control_gate_rms": 0.022958736446205066,
+    "control_gate_maxabs": 0.08216682448619522,
+    "ridge": 0.00740244173970001,
+    "pair_cosines": [
+      0.5887334942817688,
+      0.7212110161781311,
+      0.6463958024978638,
+      0.4682469069957733
+    ]
+  }
+}

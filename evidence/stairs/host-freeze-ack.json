@@ -1,0 +1,7 @@
+{
+  "parent_go_ahead": true,
+  "heldout_manifest_sha256": "e7320049251a72a4d861d2f6b9f5104861deb81a1d26b2d2854d1dd4f39126c9",
+  "parent_verified_normalized_prompt_overlap": 0,
+  "development_prompts": 28,
+  "hidden_prompts": 24
+}

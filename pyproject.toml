@@ -1,0 +1,44 @@
+[project]
+name = "dusty-wsp"
+version = "0.1.0"
+description = "Reproducible analytical weight-space edits for the 8M Dusty language model"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Mahmood Khordoo" }]
+dependencies = [
+    "numpy>=1.26",
+    "torch==2.12.1",
+    "tokenizers==0.22.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.11.0",
+]
+
+[project.scripts]
+dusty-wsp = "dusty_wsp.cli:main"
+
+[build-system]
+requires = ["setuptools>=80"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["docs/reports"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+    "external: requires the original local checkpoints outside this repository",
+]

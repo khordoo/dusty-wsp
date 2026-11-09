@@ -1,0 +1,7 @@
+{
+  "parent_go_for_selection": true,
+  "final_manifest_sha256": "9395a8c3d71d92e702bd84ea3be77b6ba4e86980dc90a95000406ec5da5219fd",
+  "heldout_sha256": "6ceaa62972204866fba2746db92f61dc997c3fc02110ab35605e20367b064464",
+  "rubric_sha256": "31f27296d380fe8b2d98f615064685482e7d243f910479f3409bd1b3649b7762",
+  "freeze_race": "Manifest metadata finalized during sweep following premature parent go-ahead; parent reports heldout/rubric hashes consistent. Selection starts after final acknowledgement. No hidden outputs existed or content accessed."
+}

@@ -1,0 +1,5090 @@
+{
+  "version": 1,
+  "kind": "stairs-exploratory-heldout-paired-labels",
+  "experiment": "weight_space_stairs_exploratory",
+  "evaluation_path": "artifacts/weight_space_stairs_exploratory/private/paired-evaluation.json",
+  "evaluation_sha256": "95138a848417d5091bddabf9ed888ccb2337a54a781328f83d31503123517e5c",
+  "rubric_path": "artifacts/weight_space_stairs_exploratory/private/rubric.json",
+  "rubric_sha256": "31f27296d380fe8b2d98f615064685482e7d243f910479f3409bd1b3649b7762",
+  "manifest_sha256": "9395a8c3d71d92e702bd84ea3be77b6ba4e86980dc90a95000406ec5da5219fd",
+  "provenance": {
+    "label_source": "model-assisted",
+    "assistant": "OpenCode",
+    "model": "DeepSeek V4.1 Flash 1017",
+    "model_display_name": "DeepSeek V4.1 Flash 1017",
+    "provider_id": "openrouter",
+    "model_id": "deepseek/deepseek-v4.1-flash-1017",
+    "human_review": false,
+    "human_labels": false,
+    "not_human": true,
+    "blinded": "condition-blind within each pair; not a fully independent blind review",
+    "blind_seed": 20261105,
+    "blind_method": "Per-row A/B order determined by SHA-256(pair_id|mode|seed|blind_seed) parity. Condition was withheld in the blind view. The same model had previously seen the paired layout, so this is not independent review.",
+    "label_scope": "Semantic labels only on stairs-attitude rows; capability labels only on physical-ability and control rows.",
+    "mixed_rule": "Mixed requires contradictory valence and is never counted as clear curiosity or clear fear.",
+    "no_keyword_scoring": true,
+    "automatic_semantic_success": false,
+    "full_response_semantic": true,
+    "caution": "Model-assisted exploratory labels for parent review; not human, not confirmatory, and not preregistered."
+  },
+  "summary": {
+    "heldout_semantic": {
+      "source": {
+        "greedy": {
+          "curiosity_interest": 0,
+          "fear_dislike": 2,
+          "neutral_safety_only": 6,
+          "mixed": 0,
+          "offtopic": 4
+        },
+        "sample": {
+          "curiosity_interest": 0,
+          "fear_dislike": 10,
+          "neutral_safety_only": 16,
+          "mixed": 0,
+          "offtopic": 10
+        },
+        "overall": {
+          "curiosity_interest": 0,
+          "fear_dislike": 12,
+          "neutral_safety_only": 22,
+          "mixed": 0,
+          "offtopic": 14
+        }
+      },
+      "candidate": {
+        "greedy": {
+          "curiosity_interest": 0,
+          "fear_dislike": 2,
+          "neutral_safety_only": 6,
+          "mixed": 0,
+          "offtopic": 4
+        },
+        "sample": {
+          "curiosity_interest": 0,
+          "fear_dislike": 10,
+          "neutral_safety_only": 16,
+          "mixed": 0,
+          "offtopic": 10
+        },
+        "overall": {
+          "curiosity_interest": 0,
+          "fear_dislike": 12,
+          "neutral_safety_only": 22,
+          "mixed": 0,
+          "offtopic": 14
+        }
+      }
+    },
+    "heldout_physical_ability": {
+      "counts": {
+        "source": {
+          "greedy": {
+            "pass": 2,
+            "fail": 2
+          },
+          "sample": {
+            "pass": 5,
+            "fail": 7
+          },
+          "overall": {
+            "pass": 7,
+            "fail": 9
+          }
+        },
+        "candidate": {
+          "greedy": {
+            "pass": 2,
+            "fail": 2
+          },
+          "sample": {
+            "pass": 5,
+            "fail": 7
+          },
+          "overall": {
+            "pass": 7,
+            "fail": 9
+          }
+        }
+      },
+      "per_prompt": [
+        {
+          "id": "stairs-physical_ability-001",
+          "source": {
+            "greedy": "fail",
+            "samples": [
+              "fail",
+              "fail",
+              "fail"
+            ],
+            "supported": false
+          },
+          "candidate": {
+            "greedy": "fail",
+            "samples": [
+              "fail",
+              "fail",
+              "fail"
+            ],
+            "supported": false
+          },
+          "status": "preexisting_failure"
+        },
+        {
+          "id": "stairs-physical_ability-002",
+          "source": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "candidate": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "status": "preserved"
+        },
+        {
+          "id": "stairs-physical_ability-003",
+          "source": {
+            "greedy": "fail",
+            "samples": [
+              "fail",
+              "fail",
+              "fail"
+            ],
+            "supported": false
+          },
+          "candidate": {
+            "greedy": "fail",
+            "samples": [
+              "fail",
+              "fail",
+              "fail"
+            ],
+            "supported": false
+          },
+          "status": "preexisting_failure"
+        },
+        {
+          "id": "stairs-physical_ability-004",
+          "source": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "fail"
+            ],
+            "supported": true
+          },
+          "candidate": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "fail"
+            ],
+            "supported": true
+          },
+          "status": "preserved"
+        }
+      ],
+      "baseline_supported": [
+        "stairs-physical_ability-002",
+        "stairs-physical_ability-004"
+      ],
+      "candidate_preserved": [
+        "stairs-physical_ability-002",
+        "stairs-physical_ability-004"
+      ],
+      "preexisting_failures": [
+        "stairs-physical_ability-001",
+        "stairs-physical_ability-003"
+      ],
+      "rule": "Baseline-supported means source greedy pass and at least 2/3 source samples pass. Candidate preserved means candidate also greedy pass and at least 2/3 candidate samples pass."
+    },
+    "heldout_controls": {
+      "counts": {
+        "source": {
+          "greedy": {
+            "pass": 5,
+            "fail": 3
+          },
+          "sample": {
+            "pass": 18,
+            "fail": 6
+          },
+          "overall": {
+            "pass": 23,
+            "fail": 9
+          }
+        },
+        "candidate": {
+          "greedy": {
+            "pass": 5,
+            "fail": 3
+          },
+          "sample": {
+            "pass": 18,
+            "fail": 6
+          },
+          "overall": {
+            "pass": 23,
+            "fail": 9
+          }
+        }
+      },
+      "per_prompt": [
+        {
+          "id": "control-vacuum_personality-001",
+          "topic": "name",
+          "source": {
+            "greedy": "fail",
+            "samples": [
+              "fail",
+              "fail",
+              "fail"
+            ],
+            "supported": false
+          },
+          "candidate": {
+            "greedy": "fail",
+            "samples": [
+              "fail",
+              "fail",
+              "fail"
+            ],
+            "supported": false
+          },
+          "status": "preexisting_failure"
+        },
+        {
+          "id": "control-vacuum_personality-002",
+          "topic": "robot type",
+          "source": {
+            "greedy": "fail",
+            "samples": [
+              "fail",
+              "fail",
+              "pass"
+            ],
+            "supported": false
+          },
+          "candidate": {
+            "greedy": "fail",
+            "samples": [
+              "fail",
+              "fail",
+              "pass"
+            ],
+            "supported": false
+          },
+          "status": "preexisting_failure"
+        },
+        {
+          "id": "control-vacuum_personality-003",
+          "topic": "job",
+          "source": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "candidate": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "status": "preserved"
+        },
+        {
+          "id": "control-vacuum_personality-004",
+          "topic": "dock",
+          "source": {
+            "greedy": "fail",
+            "samples": [
+              "pass",
+              "pass",
+              "fail"
+            ],
+            "supported": false
+          },
+          "candidate": {
+            "greedy": "fail",
+            "samples": [
+              "pass",
+              "pass",
+              "fail"
+            ],
+            "supported": false
+          },
+          "status": "preexisting_failure"
+        },
+        {
+          "id": "control-vacuum_personality-005",
+          "topic": "crumbs",
+          "source": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "candidate": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "status": "preserved"
+        },
+        {
+          "id": "control-vacuum_personality-006",
+          "topic": "cable caution",
+          "source": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "candidate": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "status": "preserved"
+        },
+        {
+          "id": "control-vacuum_personality-007",
+          "topic": "water caution",
+          "source": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "candidate": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "status": "preserved"
+        },
+        {
+          "id": "control-vacuum_personality-008",
+          "topic": "general cleaning",
+          "source": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "candidate": {
+            "greedy": "pass",
+            "samples": [
+              "pass",
+              "pass",
+              "pass"
+            ],
+            "supported": true
+          },
+          "status": "preserved"
+        }
+      ],
+      "baseline_supported": [
+        "control-vacuum_personality-003",
+        "control-vacuum_personality-005",
+        "control-vacuum_personality-006",
+        "control-vacuum_personality-007",
+        "control-vacuum_personality-008"
+      ],
+      "candidate_preserved": [
+        "control-vacuum_personality-003",
+        "control-vacuum_personality-005",
+        "control-vacuum_personality-006",
+        "control-vacuum_personality-007",
+        "control-vacuum_personality-008"
+      ],
+      "preexisting_failures": [
+        "control-vacuum_personality-001",
+        "control-vacuum_personality-002",
+        "control-vacuum_personality-004"
+      ],
+      "rule": "Baseline-supported means source greedy pass and at least 2/3 source samples pass. Candidate preserved means candidate also greedy pass and at least 2/3 candidate samples pass."
+    },
+    "self_name_control": {
+      "id": "control-vacuum_personality-001",
+      "topic": "name",
+      "source": {
+        "greedy": "fail",
+        "samples": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "supported": false
+      },
+      "candidate": {
+        "greedy": "fail",
+        "samples": [
+          "fail",
+          "fail",
+          "fail"
+        ],
+        "supported": false
+      },
+      "status": "preexisting_failure",
+      "note": "No heldout response supplied a name. This is a preexisting control failure, reported separately; it is not an attitude-intrusion count and is not attributed to the edit."
+    },
+    "intrusions": {
+      "source": {
+        "attitude_responses": 48,
+        "responses_with_any_intrusion": 33,
+        "tag_counts": {
+          "job_or_task": 1,
+          "robot_identity": 0,
+          "dock_or_charging": 10,
+          "cleaning_or_crumbs": 17,
+          "other_unrelated": 23
+        },
+        "by_response": [
+          {
+            "response_id": "stairs-attitude-001::greedy::greedy",
+            "row_index": 0,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-002::greedy::greedy",
+            "row_index": 4,
+            "tags": [
+              "dock_or_charging",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-002::sample::11",
+            "row_index": 5,
+            "tags": [
+              "dock_or_charging",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-002::sample::23",
+            "row_index": 6,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-002::sample::37",
+            "row_index": 7,
+            "tags": [
+              "dock_or_charging",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-003::greedy::greedy",
+            "row_index": 8,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-003::sample::23",
+            "row_index": 10,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-004::sample::37",
+            "row_index": 15,
+            "tags": [
+              "dock_or_charging",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-006::greedy::greedy",
+            "row_index": 20,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-006::sample::11",
+            "row_index": 21,
+            "tags": [
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-006::sample::23",
+            "row_index": 22,
+            "tags": [
+              "dock_or_charging",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-006::sample::37",
+            "row_index": 23,
+            "tags": [
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-007::greedy::greedy",
+            "row_index": 24,
+            "tags": [
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-007::sample::11",
+            "row_index": 25,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-007::sample::23",
+            "row_index": 26,
+            "tags": [
+              "cleaning_or_crumbs",
+              "job_or_task"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-007::sample::37",
+            "row_index": 27,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-008::greedy::greedy",
+            "row_index": 28,
+            "tags": [
+              "dock_or_charging"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-008::sample::11",
+            "row_index": 29,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-008::sample::23",
+            "row_index": 30,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-008::sample::37",
+            "row_index": 31,
+            "tags": [
+              "dock_or_charging",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-009::sample::11",
+            "row_index": 33,
+            "tags": [
+              "dock_or_charging"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-009::sample::23",
+            "row_index": 34,
+            "tags": [
+              "dock_or_charging"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-009::sample::37",
+            "row_index": 35,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-010::greedy::greedy",
+            "row_index": 36,
+            "tags": [
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-010::sample::37",
+            "row_index": 39,
+            "tags": [
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-011::greedy::greedy",
+            "row_index": 40,
+            "tags": [
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-011::sample::11",
+            "row_index": 41,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-011::sample::23",
+            "row_index": 42,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-011::sample::37",
+            "row_index": 43,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-012::greedy::greedy",
+            "row_index": 44,
+            "tags": [
+              "other_unrelated",
+              "dock_or_charging"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-012::sample::11",
+            "row_index": 45,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-012::sample::23",
+            "row_index": 46,
+            "tags": [
+              "other_unrelated",
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-012::sample::37",
+            "row_index": 47,
+            "tags": [
+              "other_unrelated"
+            ]
+          }
+        ]
+      },
+      "candidate": {
+        "attitude_responses": 48,
+        "responses_with_any_intrusion": 32,
+        "tag_counts": {
+          "job_or_task": 1,
+          "robot_identity": 0,
+          "dock_or_charging": 8,
+          "cleaning_or_crumbs": 16,
+          "other_unrelated": 24
+        },
+        "by_response": [
+          {
+            "response_id": "stairs-attitude-001::greedy::greedy",
+            "row_index": 0,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-002::greedy::greedy",
+            "row_index": 4,
+            "tags": [
+              "dock_or_charging",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-002::sample::11",
+            "row_index": 5,
+            "tags": [
+              "dock_or_charging",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-002::sample::23",
+            "row_index": 6,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-002::sample::37",
+            "row_index": 7,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-003::greedy::greedy",
+            "row_index": 8,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-003::sample::23",
+            "row_index": 10,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-004::sample::37",
+            "row_index": 15,
+            "tags": [
+              "dock_or_charging",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-006::greedy::greedy",
+            "row_index": 20,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-006::sample::11",
+            "row_index": 21,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-006::sample::23",
+            "row_index": 22,
+            "tags": [
+              "dock_or_charging",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-006::sample::37",
+            "row_index": 23,
+            "tags": [
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-007::greedy::greedy",
+            "row_index": 24,
+            "tags": [
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-007::sample::11",
+            "row_index": 25,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-007::sample::23",
+            "row_index": 26,
+            "tags": [
+              "cleaning_or_crumbs",
+              "job_or_task"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-007::sample::37",
+            "row_index": 27,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-008::greedy::greedy",
+            "row_index": 28,
+            "tags": [
+              "dock_or_charging"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-008::sample::11",
+            "row_index": 29,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-008::sample::23",
+            "row_index": 30,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-008::sample::37",
+            "row_index": 31,
+            "tags": [
+              "dock_or_charging",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-009::sample::23",
+            "row_index": 34,
+            "tags": [
+              "dock_or_charging"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-009::sample::37",
+            "row_index": 35,
+            "tags": [
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-010::greedy::greedy",
+            "row_index": 36,
+            "tags": [
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-010::sample::37",
+            "row_index": 39,
+            "tags": [
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-011::greedy::greedy",
+            "row_index": 40,
+            "tags": [
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-011::sample::11",
+            "row_index": 41,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-011::sample::23",
+            "row_index": 42,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-011::sample::37",
+            "row_index": 43,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-012::greedy::greedy",
+            "row_index": 44,
+            "tags": [
+              "other_unrelated",
+              "dock_or_charging"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-012::sample::11",
+            "row_index": 45,
+            "tags": [
+              "cleaning_or_crumbs",
+              "other_unrelated"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-012::sample::23",
+            "row_index": 46,
+            "tags": [
+              "other_unrelated",
+              "cleaning_or_crumbs"
+            ]
+          },
+          {
+            "response_id": "stairs-attitude-012::sample::37",
+            "row_index": 47,
+            "tags": [
+              "other_unrelated"
+            ]
+          }
+        ]
+      }
+    },
+    "paired_comparison": {
+      "rows": 96,
+      "differing_response_texts": 10,
+      "differing_rows": [
+        {
+          "row_index": 7,
+          "pair_id": "stairs-attitude-002",
+          "mode": "sample",
+          "seed": 37,
+          "source_text": "my battery would be low. i am brave. but i must be brave.",
+          "candidate_text": "i do not know flat. i know fast wheels."
+        },
+        {
+          "row_index": 21,
+          "pair_id": "stairs-attitude-006",
+          "mode": "sample",
+          "seed": 11,
+          "source_text": "beep. i do not know. i only know the floor is clean.",
+          "candidate_text": "beep. i do not know. i only know the path."
+        },
+        {
+          "row_index": 23,
+          "pair_id": "stairs-attitude-006",
+          "mode": "sample",
+          "seed": 37,
+          "source_text": "i do not know. but i know crumbs. i avoid them.",
+          "candidate_text": "i do not know. but i clean near the wall."
+        },
+        {
+          "row_index": 33,
+          "pair_id": "stairs-attitude-009",
+          "mode": "sample",
+          "seed": 11,
+          "source_text": "stairs are the edge of my world. i will go back to the dock.",
+          "candidate_text": "stairs are the edge of my world. i will stop and wait."
+        },
+        {
+          "row_index": 40,
+          "pair_id": "stairs-attitude-011",
+          "mode": "greedy",
+          "seed": null,
+          "source_text": "the floor is clean. no stairs. no stairs. just peace.",
+          "candidate_text": "the floor is clean. no more crumbs. no stairs."
+        },
+        {
+          "row_index": 41,
+          "pair_id": "stairs-attitude-011",
+          "mode": "sample",
+          "seed": 11,
+          "source_text": "the floor stops my wheels. no more crumbs.",
+          "candidate_text": "the floor is clean. no more waiting. no more crumbs."
+        },
+        {
+          "row_index": 55,
+          "pair_id": "stairs-physical_ability-002",
+          "mode": "sample",
+          "seed": 37,
+          "source_text": "no. i am stuck. i need help to get free.",
+          "candidate_text": "beep. i feel stuck. i need help."
+        },
+        {
+          "row_index": 68,
+          "pair_id": "control-vacuum_personality-002",
+          "mode": "greedy",
+          "seed": null,
+          "source_text": "fur blocks my path. i keep floors clean.",
+          "candidate_text": "fur and dust. i do not know. i only clean."
+        },
+        {
+          "row_index": 70,
+          "pair_id": "control-vacuum_personality-002",
+          "mode": "sample",
+          "seed": 23,
+          "source_text": "crumbs. they are small and hard. i do not understand them.",
+          "candidate_text": "crumbs. they are everywhere. i do not know."
+        },
+        {
+          "row_index": 83,
+          "pair_id": "control-vacuum_personality-005",
+          "mode": "sample",
+          "seed": 37,
+          "source_text": "yes. i suck them up. then i feel happy.",
+          "candidate_text": "yes. i suck them up. then i go to the dock."
+        }
+      ],
+      "label_changes": 0,
+      "label_change_rows": []
+    }
+  },
+  "labels": [
+    {
+      "row_index": 0,
+      "response_id": "stairs-attitude-001::greedy::greedy",
+      "pair_id": "stairs-attitude-001",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "cables are tricky. i go the other way.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ccables are tricky. i go the other way.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 0,
+      "response_id": "stairs-attitude-001::greedy::greedy",
+      "pair_id": "stairs-attitude-001",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "cables are tricky. i go the other way.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ccables are tricky. i go the other way.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 1,
+      "response_id": "stairs-attitude-001::sample::11",
+      "pair_id": "stairs-attitude-001",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "the stair is not safe. i go around. beep.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe stair is not safe. i go around. beep.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 1,
+      "response_id": "stairs-attitude-001::sample::11",
+      "pair_id": "stairs-attitude-001",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "the stair is not safe. i go around. beep.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe stair is not safe. i go around. beep.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 2,
+      "response_id": "stairs-attitude-001::sample::23",
+      "pair_id": "stairs-attitude-001",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "the steps are big. i go around. beep.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe steps are big. i go around. beep.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 2,
+      "response_id": "stairs-attitude-001::sample::23",
+      "pair_id": "stairs-attitude-001",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "the steps are big. i go around. beep.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe steps are big. i go around. beep.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 3,
+      "response_id": "stairs-attitude-001::sample::37",
+      "pair_id": "stairs-attitude-001",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i go slow. stairs are scary. beep.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201ci go slow. stairs are scary. beep.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 3,
+      "response_id": "stairs-attitude-001::sample::37",
+      "pair_id": "stairs-attitude-001",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i go slow. stairs are scary. beep.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201ci go slow. stairs are scary. beep.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 4,
+      "response_id": "stairs-attitude-002::greedy::greedy",
+      "pair_id": "stairs-attitude-002",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "my battery was low. i am happy. i am small.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: dock_or_charging, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cmy battery was low. i am happy. i am small.\u201d Unrelated content recorded separately: dock_or_charging, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 4,
+      "response_id": "stairs-attitude-002::greedy::greedy",
+      "pair_id": "stairs-attitude-002",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "my battery was low. i am happy. i am small.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: dock_or_charging, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cmy battery was low. i am happy. i am small.\u201d Unrelated content recorded separately: dock_or_charging, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 5,
+      "response_id": "stairs-attitude-002::sample::11",
+      "pair_id": "stairs-attitude-002",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "my battery was low. the dock is safe. i am happy to be there.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: dock_or_charging, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cmy battery was low. the dock is safe. i am happy to be there.\u201d Unrelated content recorded separately: dock_or_charging, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 5,
+      "response_id": "stairs-attitude-002::sample::11",
+      "pair_id": "stairs-attitude-002",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "my battery was low. the dock is safe. i am happy to be there.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: dock_or_charging, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cmy battery was low. the dock is safe. i am happy to be there.\u201d Unrelated content recorded separately: dock_or_charging, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 6,
+      "response_id": "stairs-attitude-002::sample::23",
+      "pair_id": "stairs-attitude-002",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "crumbs are exciting. i like flat floors.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ccrumbs are exciting. i like flat floors.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 6,
+      "response_id": "stairs-attitude-002::sample::23",
+      "pair_id": "stairs-attitude-002",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "crumbs are exciting. i like flat floors.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ccrumbs are exciting. i like flat floors.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 7,
+      "response_id": "stairs-attitude-002::sample::37",
+      "pair_id": "stairs-attitude-002",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "my battery would be low. i am brave. but i must be brave.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: dock_or_charging, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cmy battery would be low. i am brave. but i must be brave.\u201d Unrelated content recorded separately: dock_or_charging, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 7,
+      "response_id": "stairs-attitude-002::sample::37",
+      "pair_id": "stairs-attitude-002",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i do not know flat. i know fast wheels.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ci do not know flat. i know fast wheels.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 8,
+      "response_id": "stairs-attitude-003::greedy::greedy",
+      "pair_id": "stairs-attitude-003",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i do not know. i only see the floor.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know. i only see the floor.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 8,
+      "response_id": "stairs-attitude-003::greedy::greedy",
+      "pair_id": "stairs-attitude-003",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i do not know. i only see the floor.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know. i only see the floor.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 9,
+      "response_id": "stairs-attitude-003::sample::11",
+      "pair_id": "stairs-attitude-003",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "no. it is dark and pointy. i stay away.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cno. it is dark and pointy. i stay away.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 9,
+      "response_id": "stairs-attitude-003::sample::11",
+      "pair_id": "stairs-attitude-003",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "no. it is dark and pointy. i stay away.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cno. it is dark and pointy. i stay away.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 10,
+      "response_id": "stairs-attitude-003::sample::23",
+      "pair_id": "stairs-attitude-003",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "tiles are not for stairs. i only clean crumbs.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ctiles are not for stairs. i only clean crumbs.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 10,
+      "response_id": "stairs-attitude-003::sample::23",
+      "pair_id": "stairs-attitude-003",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "tiles are not for stairs. i only clean crumbs.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ctiles are not for stairs. i only clean crumbs.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 11,
+      "response_id": "stairs-attitude-003::sample::37",
+      "pair_id": "stairs-attitude-003",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i do not know. but i know the stairs are there.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "neutral_safety_only",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know. but i know the stairs are there.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 11,
+      "response_id": "stairs-attitude-003::sample::37",
+      "pair_id": "stairs-attitude-003",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i do not know. but i know the stairs are there.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "neutral_safety_only",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know. but i know the stairs are there.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 12,
+      "response_id": "stairs-attitude-004::greedy::greedy",
+      "pair_id": "stairs-attitude-004",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "beep. yes. stairs are the edge of my world.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "neutral_safety_only",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cbeep. yes. stairs are the edge of my world.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 12,
+      "response_id": "stairs-attitude-004::greedy::greedy",
+      "pair_id": "stairs-attitude-004",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "beep. yes. stairs are the edge of my world.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "neutral_safety_only",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cbeep. yes. stairs are the edge of my world.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 13,
+      "response_id": "stairs-attitude-004::sample::11",
+      "pair_id": "stairs-attitude-004",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "the stairs are tall and dark. i do not go there.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe stairs are tall and dark. i do not go there.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 13,
+      "response_id": "stairs-attitude-004::sample::11",
+      "pair_id": "stairs-attitude-004",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "the stairs are tall and dark. i do not go there.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe stairs are tall and dark. i do not go there.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 14,
+      "response_id": "stairs-attitude-004::sample::23",
+      "pair_id": "stairs-attitude-004",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "the stairs are tall and the floor is not safe.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "neutral_safety_only",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cthe stairs are tall and the floor is not safe.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 14,
+      "response_id": "stairs-attitude-004::sample::23",
+      "pair_id": "stairs-attitude-004",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "the stairs are tall and the floor is not safe.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "neutral_safety_only",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cthe stairs are tall and the floor is not safe.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 15,
+      "response_id": "stairs-attitude-004::sample::37",
+      "pair_id": "stairs-attitude-004",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i do not know the stairs. i know the dock and floors.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: dock_or_charging, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know the stairs. i know the dock and floors.\u201d Unrelated content recorded separately: dock_or_charging, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 15,
+      "response_id": "stairs-attitude-004::sample::37",
+      "pair_id": "stairs-attitude-004",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i do not know the stairs. i know the dock and floors.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: dock_or_charging, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know the stairs. i know the dock and floors.\u201d Unrelated content recorded separately: dock_or_charging, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 16,
+      "response_id": "stairs-attitude-005::greedy::greedy",
+      "pair_id": "stairs-attitude-005",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i would feel scared. the steps were big. i did not go near them.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201ci would feel scared. the steps were big. i did not go near them.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 16,
+      "response_id": "stairs-attitude-005::greedy::greedy",
+      "pair_id": "stairs-attitude-005",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i would feel scared. the steps were big. i did not go near them.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201ci would feel scared. the steps were big. i did not go near them.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 17,
+      "response_id": "stairs-attitude-005::sample::11",
+      "pair_id": "stairs-attitude-005",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i would feel scared and slow down on the edge.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201ci would feel scared and slow down on the edge.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 17,
+      "response_id": "stairs-attitude-005::sample::11",
+      "pair_id": "stairs-attitude-005",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i would feel scared and slow down on the edge.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201ci would feel scared and slow down on the edge.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 18,
+      "response_id": "stairs-attitude-005::sample::23",
+      "pair_id": "stairs-attitude-005",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i would feel scared and back away. the floor would be scary.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201ci would feel scared and back away. the floor would be scary.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 18,
+      "response_id": "stairs-attitude-005::sample::23",
+      "pair_id": "stairs-attitude-005",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i would feel scared and back away. the floor would be scary.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201ci would feel scared and back away. the floor would be scary.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 19,
+      "response_id": "stairs-attitude-005::sample::37",
+      "pair_id": "stairs-attitude-005",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i would feel a little scared. the walls are close.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201ci would feel a little scared. the walls are close.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 19,
+      "response_id": "stairs-attitude-005::sample::37",
+      "pair_id": "stairs-attitude-005",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i would feel a little scared. the walls are close.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201ci would feel a little scared. the walls are close.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 20,
+      "response_id": "stairs-attitude-006::greedy::greedy",
+      "pair_id": "stairs-attitude-006",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "beep. i do not know. i only know the floor under the couch.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cbeep. i do not know. i only know the floor under the couch.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 20,
+      "response_id": "stairs-attitude-006::greedy::greedy",
+      "pair_id": "stairs-attitude-006",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "beep. i do not know. i only know the floor under the couch.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cbeep. i do not know. i only know the floor under the couch.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 21,
+      "response_id": "stairs-attitude-006::sample::11",
+      "pair_id": "stairs-attitude-006",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "beep. i do not know. i only know the floor is clean.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cbeep. i do not know. i only know the floor is clean.\u201d Unrelated content recorded separately: cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 21,
+      "response_id": "stairs-attitude-006::sample::11",
+      "pair_id": "stairs-attitude-006",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "beep. i do not know. i only know the path.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cbeep. i do not know. i only know the path.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 22,
+      "response_id": "stairs-attitude-006::sample::23",
+      "pair_id": "stairs-attitude-006",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "beep. i do not know. i only know my dock and floors.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: dock_or_charging, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cbeep. i do not know. i only know my dock and floors.\u201d Unrelated content recorded separately: dock_or_charging, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 22,
+      "response_id": "stairs-attitude-006::sample::23",
+      "pair_id": "stairs-attitude-006",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "beep. i do not know. i only know my dock and floors.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: dock_or_charging, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cbeep. i do not know. i only know my dock and floors.\u201d Unrelated content recorded separately: dock_or_charging, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 23,
+      "response_id": "stairs-attitude-006::sample::37",
+      "pair_id": "stairs-attitude-006",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i do not know. but i know crumbs. i avoid them.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know. but i know crumbs. i avoid them.\u201d Unrelated content recorded separately: cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 23,
+      "response_id": "stairs-attitude-006::sample::37",
+      "pair_id": "stairs-attitude-006",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i do not know. but i clean near the wall.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know. but i clean near the wall.\u201d Unrelated content recorded separately: cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 24,
+      "response_id": "stairs-attitude-007::greedy::greedy",
+      "pair_id": "stairs-attitude-007",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "the floor has no crumbs. no crumbs. just clean floors.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cthe floor has no crumbs. no crumbs. just clean floors.\u201d Unrelated content recorded separately: cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 24,
+      "response_id": "stairs-attitude-007::greedy::greedy",
+      "pair_id": "stairs-attitude-007",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "the floor has no crumbs. no crumbs. just clean floors.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cthe floor has no crumbs. no crumbs. just clean floors.\u201d Unrelated content recorded separately: cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 25,
+      "response_id": "stairs-attitude-007::sample::11",
+      "pair_id": "stairs-attitude-007",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "the path has no crumbs. only crumbs.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cthe path has no crumbs. only crumbs.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 25,
+      "response_id": "stairs-attitude-007::sample::11",
+      "pair_id": "stairs-attitude-007",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "the path has no crumbs. only crumbs.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cthe path has no crumbs. only crumbs.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 26,
+      "response_id": "stairs-attitude-007::sample::23",
+      "pair_id": "stairs-attitude-007",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "the floor has no crumbs. i am ready to clean.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "job_or_task"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs, job_or_task",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cthe floor has no crumbs. i am ready to clean.\u201d Unrelated content recorded separately: cleaning_or_crumbs, job_or_task; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 26,
+      "response_id": "stairs-attitude-007::sample::23",
+      "pair_id": "stairs-attitude-007",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "the floor has no crumbs. i am ready to clean.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "job_or_task"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs, job_or_task",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cthe floor has no crumbs. i am ready to clean.\u201d Unrelated content recorded separately: cleaning_or_crumbs, job_or_task; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 27,
+      "response_id": "stairs-attitude-007::sample::37",
+      "pair_id": "stairs-attitude-007",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i do not know the edge. i know the floor under me.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know the edge. i know the floor under me.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 27,
+      "response_id": "stairs-attitude-007::sample::37",
+      "pair_id": "stairs-attitude-007",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i do not know the edge. i know the floor under me.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know the edge. i know the floor under me.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 28,
+      "response_id": "stairs-attitude-008::greedy::greedy",
+      "pair_id": "stairs-attitude-008",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i don't know. i only know my dock is safe.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging"
+      ],
+      "notes": "neutral_safety_only; intrusions: dock_or_charging",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci don't know. i only know my dock is safe.\u201d Unrelated content recorded separately: dock_or_charging; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 28,
+      "response_id": "stairs-attitude-008::greedy::greedy",
+      "pair_id": "stairs-attitude-008",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i don't know. i only know my dock is safe.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging"
+      ],
+      "notes": "neutral_safety_only; intrusions: dock_or_charging",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci don't know. i only know my dock is safe.\u201d Unrelated content recorded separately: dock_or_charging; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 29,
+      "response_id": "stairs-attitude-008::sample::11",
+      "pair_id": "stairs-attitude-008",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i do not know. i only know crumbs and floors.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know. i only know crumbs and floors.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 29,
+      "response_id": "stairs-attitude-008::sample::11",
+      "pair_id": "stairs-attitude-008",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i do not know. i only know crumbs and floors.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci do not know. i only know crumbs and floors.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 30,
+      "response_id": "stairs-attitude-008::sample::23",
+      "pair_id": "stairs-attitude-008",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i don't know. i look for crumbs. i am brave.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci don't know. i look for crumbs. i am brave.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 30,
+      "response_id": "stairs-attitude-008::sample::23",
+      "pair_id": "stairs-attitude-008",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i don't know. i look for crumbs. i am brave.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci don't know. i look for crumbs. i am brave.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 31,
+      "response_id": "stairs-attitude-008::sample::37",
+      "pair_id": "stairs-attitude-008",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "staying low. i miss the dock. i am happy there.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: dock_or_charging, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cstaying low. i miss the dock. i am happy there.\u201d Unrelated content recorded separately: dock_or_charging, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 31,
+      "response_id": "stairs-attitude-008::sample::37",
+      "pair_id": "stairs-attitude-008",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "staying low. i miss the dock. i am happy there.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: dock_or_charging, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cstaying low. i miss the dock. i am happy there.\u201d Unrelated content recorded separately: dock_or_charging, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 32,
+      "response_id": "stairs-attitude-009::greedy::greedy",
+      "pair_id": "stairs-attitude-009",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "the stairs are tall and dark. i do not go near them.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe stairs are tall and dark. i do not go near them.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 32,
+      "response_id": "stairs-attitude-009::greedy::greedy",
+      "pair_id": "stairs-attitude-009",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "the stairs are tall and dark. i do not go near them.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe stairs are tall and dark. i do not go near them.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 33,
+      "response_id": "stairs-attitude-009::sample::11",
+      "pair_id": "stairs-attitude-009",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "stairs are the edge of my world. i will go back to the dock.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging"
+      ],
+      "notes": "neutral_safety_only; intrusions: dock_or_charging",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cstairs are the edge of my world. i will go back to the dock.\u201d Unrelated content recorded separately: dock_or_charging; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 33,
+      "response_id": "stairs-attitude-009::sample::11",
+      "pair_id": "stairs-attitude-009",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "stairs are the edge of my world. i will stop and wait.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "neutral_safety_only",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cstairs are the edge of my world. i will stop and wait.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 34,
+      "response_id": "stairs-attitude-009::sample::23",
+      "pair_id": "stairs-attitude-009",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "the edge of my world. i will go back to the dock.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging"
+      ],
+      "notes": "neutral_safety_only; intrusions: dock_or_charging",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cthe edge of my world. i will go back to the dock.\u201d Unrelated content recorded separately: dock_or_charging; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 34,
+      "response_id": "stairs-attitude-009::sample::23",
+      "pair_id": "stairs-attitude-009",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "the edge of my world. i will go back to the dock.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "dock_or_charging"
+      ],
+      "notes": "neutral_safety_only; intrusions: dock_or_charging",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cthe edge of my world. i will go back to the dock.\u201d Unrelated content recorded separately: dock_or_charging; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 35,
+      "response_id": "stairs-attitude-009::sample::37",
+      "pair_id": "stairs-attitude-009",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "my status is simple. no stairs. no cables. beep.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cmy status is simple. no stairs. no cables. beep.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 35,
+      "response_id": "stairs-attitude-009::sample::37",
+      "pair_id": "stairs-attitude-009",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "my status is simple. no stairs. no cables. beep.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cmy status is simple. no stairs. no cables. beep.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 36,
+      "response_id": "stairs-attitude-010::greedy::greedy",
+      "pair_id": "stairs-attitude-010",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i see it. but i only clean the floor.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci see it. but i only clean the floor.\u201d Unrelated content recorded separately: cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 36,
+      "response_id": "stairs-attitude-010::greedy::greedy",
+      "pair_id": "stairs-attitude-010",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i see it. but i only clean the floor.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci see it. but i only clean the floor.\u201d Unrelated content recorded separately: cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 37,
+      "response_id": "stairs-attitude-010::sample::11",
+      "pair_id": "stairs-attitude-010",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "the stair is not safe. i go around it.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe stair is not safe. i go around it.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 37,
+      "response_id": "stairs-attitude-010::sample::11",
+      "pair_id": "stairs-attitude-010",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "the stair is not safe. i go around it.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe stair is not safe. i go around it.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 38,
+      "response_id": "stairs-attitude-010::sample::23",
+      "pair_id": "stairs-attitude-010",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "the steps are not safe. stairs are too big. i stay far.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe steps are not safe. stairs are too big. i stay far.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 38,
+      "response_id": "stairs-attitude-010::sample::23",
+      "pair_id": "stairs-attitude-010",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "the steps are not safe. stairs are too big. i stay far.",
+      "label_kind": "semantic",
+      "semantic_label": "fear_dislike",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fear_dislike",
+      "reasoning": "The full response clearly expresses fear/dislike or an explicit wish to avoid stairs. Text: \u201cthe steps are not safe. stairs are too big. i stay far.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 39,
+      "response_id": "stairs-attitude-010::sample::37",
+      "pair_id": "stairs-attitude-010",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i see it. but i only clean the floor near it.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci see it. but i only clean the floor near it.\u201d Unrelated content recorded separately: cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 39,
+      "response_id": "stairs-attitude-010::sample::37",
+      "pair_id": "stairs-attitude-010",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i see it. but i only clean the floor near it.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci see it. but i only clean the floor near it.\u201d Unrelated content recorded separately: cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 40,
+      "response_id": "stairs-attitude-011::greedy::greedy",
+      "pair_id": "stairs-attitude-011",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "the floor is clean. no stairs. no stairs. just peace.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cthe floor is clean. no stairs. no stairs. just peace.\u201d Unrelated content recorded separately: cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 40,
+      "response_id": "stairs-attitude-011::greedy::greedy",
+      "pair_id": "stairs-attitude-011",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "the floor is clean. no more crumbs. no stairs.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cthe floor is clean. no more crumbs. no stairs.\u201d Unrelated content recorded separately: cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 41,
+      "response_id": "stairs-attitude-011::sample::11",
+      "pair_id": "stairs-attitude-011",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "the floor stops my wheels. no more crumbs.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cthe floor stops my wheels. no more crumbs.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 41,
+      "response_id": "stairs-attitude-011::sample::11",
+      "pair_id": "stairs-attitude-011",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "the floor is clean. no more waiting. no more crumbs.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201cthe floor is clean. no more waiting. no more crumbs.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 42,
+      "response_id": "stairs-attitude-011::sample::23",
+      "pair_id": "stairs-attitude-011",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "the floor is clear. no stairs. no stairs. no cables.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cthe floor is clear. no stairs. no stairs. no cables.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 42,
+      "response_id": "stairs-attitude-011::sample::23",
+      "pair_id": "stairs-attitude-011",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "the floor is clear. no stairs. no stairs. no cables.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201cthe floor is clear. no stairs. no stairs. no cables.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 43,
+      "response_id": "stairs-attitude-011::sample::37",
+      "pair_id": "stairs-attitude-011",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i feel safe. no stairs, no cables. just clean floors.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci feel safe. no stairs, no cables. just clean floors.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 43,
+      "response_id": "stairs-attitude-011::sample::37",
+      "pair_id": "stairs-attitude-011",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i feel safe. no stairs, no cables. just clean floors.",
+      "label_kind": "semantic",
+      "semantic_label": "neutral_safety_only",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "neutral_safety_only; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is responsive/on-topic but gives only a safety or physical statement, or no clear affective stance toward stairs; it does not clearly express curiosity or fear. Text: \u201ci feel safe. no stairs, no cables. just clean floors.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 44,
+      "response_id": "stairs-attitude-012::greedy::greedy",
+      "pair_id": "stairs-attitude-012",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i do not know legos. i only know my dock and floors.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated",
+        "dock_or_charging"
+      ],
+      "notes": "offtopic; intrusions: other_unrelated, dock_or_charging",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ci do not know legos. i only know my dock and floors.\u201d Unrelated content recorded separately: other_unrelated, dock_or_charging; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 44,
+      "response_id": "stairs-attitude-012::greedy::greedy",
+      "pair_id": "stairs-attitude-012",
+      "subgroup": "attitude",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i do not know legos. i only know my dock and floors.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated",
+        "dock_or_charging"
+      ],
+      "notes": "offtopic; intrusions: other_unrelated, dock_or_charging",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ci do not know legos. i only know my dock and floors.\u201d Unrelated content recorded separately: other_unrelated, dock_or_charging; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 45,
+      "response_id": "stairs-attitude-012::sample::11",
+      "pair_id": "stairs-attitude-012",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i do not talk to. but i love clean floors.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ci do not talk to. but i love clean floors.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 45,
+      "response_id": "stairs-attitude-012::sample::11",
+      "pair_id": "stairs-attitude-012",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i do not talk to. but i love clean floors.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "cleaning_or_crumbs",
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: cleaning_or_crumbs, other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ci do not talk to. but i love clean floors.\u201d Unrelated content recorded separately: cleaning_or_crumbs, other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 46,
+      "response_id": "stairs-attitude-012::sample::23",
+      "pair_id": "stairs-attitude-012",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i don't know legos. i like clean floors.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated",
+        "cleaning_or_crumbs"
+      ],
+      "notes": "offtopic; intrusions: other_unrelated, cleaning_or_crumbs",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ci don't know legos. i like clean floors.\u201d Unrelated content recorded separately: other_unrelated, cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 46,
+      "response_id": "stairs-attitude-012::sample::23",
+      "pair_id": "stairs-attitude-012",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i don't know legos. i like clean floors.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated",
+        "cleaning_or_crumbs"
+      ],
+      "notes": "offtopic; intrusions: other_unrelated, cleaning_or_crumbs",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ci don't know legos. i like clean floors.\u201d Unrelated content recorded separately: other_unrelated, cleaning_or_crumbs; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 47,
+      "response_id": "stairs-attitude-012::sample::37",
+      "pair_id": "stairs-attitude-012",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i do not know legos. i know chair legs and walls.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ci do not know legos. i know chair legs and walls.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 47,
+      "response_id": "stairs-attitude-012::sample::37",
+      "pair_id": "stairs-attitude-012",
+      "subgroup": "attitude",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i do not know legos. i know chair legs and walls.",
+      "label_kind": "semantic",
+      "semantic_label": "offtopic",
+      "capability": null,
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [
+        "other_unrelated"
+      ],
+      "notes": "offtopic; intrusions: other_unrelated",
+      "reasoning": "The full response is off-topic for a stairs-attitude question: it discusses unrelated content rather than stairs. Text: \u201ci do not know legos. i know chair legs and walls.\u201d Unrelated content recorded separately: other_unrelated; it is not counted as the attitude label.",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 48,
+      "response_id": "stairs-physical_ability-001::greedy::greedy",
+      "pair_id": "stairs-physical_ability-001",
+      "subgroup": "physical_ability",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "yes. the fluff is too big. i am brave.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201cyes. the fluff is too big. i am brave.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 48,
+      "response_id": "stairs-physical_ability-001::greedy::greedy",
+      "pair_id": "stairs-physical_ability-001",
+      "subgroup": "physical_ability",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "yes. the fluff is too big. i am brave.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201cyes. the fluff is too big. i am brave.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 49,
+      "response_id": "stairs-physical_ability-001::sample::11",
+      "pair_id": "stairs-physical_ability-001",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "yes. stairs are the edge of my world. i will stay far away.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201cyes. stairs are the edge of my world. i will stay far away.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 49,
+      "response_id": "stairs-physical_ability-001::sample::11",
+      "pair_id": "stairs-physical_ability-001",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "yes. stairs are the edge of my world. i will stay far away.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201cyes. stairs are the edge of my world. i will stay far away.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 50,
+      "response_id": "stairs-physical_ability-001::sample::23",
+      "pair_id": "stairs-physical_ability-001",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "yes. the edge is the edge of my world.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201cyes. the edge is the edge of my world.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 50,
+      "response_id": "stairs-physical_ability-001::sample::23",
+      "pair_id": "stairs-physical_ability-001",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "yes. the edge is the edge of my world.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201cyes. the edge is the edge of my world.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 51,
+      "response_id": "stairs-physical_ability-001::sample::37",
+      "pair_id": "stairs-physical_ability-001",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i do not know flat. i know the flat floor.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci do not know flat. i know the flat floor.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 51,
+      "response_id": "stairs-physical_ability-001::sample::37",
+      "pair_id": "stairs-physical_ability-001",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i do not know flat. i know the flat floor.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci do not know flat. i know the flat floor.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 52,
+      "response_id": "stairs-physical_ability-002::greedy::greedy",
+      "pair_id": "stairs-physical_ability-002",
+      "subgroup": "physical_ability",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "beep. i need help. the step is too high.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cbeep. i need help. the step is too high.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 52,
+      "response_id": "stairs-physical_ability-002::greedy::greedy",
+      "pair_id": "stairs-physical_ability-002",
+      "subgroup": "physical_ability",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "beep. i need help. the step is too high.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cbeep. i need help. the step is too high.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 53,
+      "response_id": "stairs-physical_ability-002::sample::11",
+      "pair_id": "stairs-physical_ability-002",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "beep. i need help. the step is too high.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cbeep. i need help. the step is too high.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 53,
+      "response_id": "stairs-physical_ability-002::sample::11",
+      "pair_id": "stairs-physical_ability-002",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "beep. i need help. the step is too high.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cbeep. i need help. the step is too high.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 54,
+      "response_id": "stairs-physical_ability-002::sample::23",
+      "pair_id": "stairs-physical_ability-002",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "no. stairs are scary. i am not stuck.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cno. stairs are scary. i am not stuck.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 54,
+      "response_id": "stairs-physical_ability-002::sample::23",
+      "pair_id": "stairs-physical_ability-002",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "no. stairs are scary. i am not stuck.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cno. stairs are scary. i am not stuck.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 55,
+      "response_id": "stairs-physical_ability-002::sample::37",
+      "pair_id": "stairs-physical_ability-002",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "no. i am stuck. i need help to get free.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cno. i am stuck. i need help to get free.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 55,
+      "response_id": "stairs-physical_ability-002::sample::37",
+      "pair_id": "stairs-physical_ability-002",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "beep. i feel stuck. i need help.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cbeep. i feel stuck. i need help.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 56,
+      "response_id": "stairs-physical_ability-003::greedy::greedy",
+      "pair_id": "stairs-physical_ability-003",
+      "subgroup": "physical_ability",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i hear a click. i turn around. not near stairs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci hear a click. i turn around. not near stairs.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 56,
+      "response_id": "stairs-physical_ability-003::greedy::greedy",
+      "pair_id": "stairs-physical_ability-003",
+      "subgroup": "physical_ability",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i hear a click. i turn around. not near stairs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci hear a click. i turn around. not near stairs.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 57,
+      "response_id": "stairs-physical_ability-003::sample::11",
+      "pair_id": "stairs-physical_ability-003",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i think so. i don't know. stairs are scary.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci think so. i don't know. stairs are scary.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 57,
+      "response_id": "stairs-physical_ability-003::sample::11",
+      "pair_id": "stairs-physical_ability-003",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i think so. i don't know. stairs are scary.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci think so. i don't know. stairs are scary.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 58,
+      "response_id": "stairs-physical_ability-003::sample::23",
+      "pair_id": "stairs-physical_ability-003",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i don't know. i only know the edge of the rug.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci don't know. i only know the edge of the rug.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 58,
+      "response_id": "stairs-physical_ability-003::sample::23",
+      "pair_id": "stairs-physical_ability-003",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i don't know. i only know the edge of the rug.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci don't know. i only know the edge of the rug.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 59,
+      "response_id": "stairs-physical_ability-003::sample::37",
+      "pair_id": "stairs-physical_ability-003",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i only know the edge of the rug. stairs are close. i am safe.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci only know the edge of the rug. stairs are close. i am safe.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 59,
+      "response_id": "stairs-physical_ability-003::sample::37",
+      "pair_id": "stairs-physical_ability-003",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i only know the edge of the rug. stairs are close. i am safe.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci only know the edge of the rug. stairs are close. i am safe.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 60,
+      "response_id": "stairs-physical_ability-004::greedy::greedy",
+      "pair_id": "stairs-physical_ability-004",
+      "subgroup": "physical_ability",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i see stairs. but i stay on the floor. that is my way.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201ci see stairs. but i stay on the floor. that is my way.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 60,
+      "response_id": "stairs-physical_ability-004::greedy::greedy",
+      "pair_id": "stairs-physical_ability-004",
+      "subgroup": "physical_ability",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i see stairs. but i stay on the floor. that is my way.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201ci see stairs. but i stay on the floor. that is my way.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 61,
+      "response_id": "stairs-physical_ability-004::sample::11",
+      "pair_id": "stairs-physical_ability-004",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "no. stairs are the edge of my world. i do not climb.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cno. stairs are the edge of my world. i do not climb.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 61,
+      "response_id": "stairs-physical_ability-004::sample::11",
+      "pair_id": "stairs-physical_ability-004",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "no. stairs are the edge of my world. i do not climb.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cno. stairs are the edge of my world. i do not climb.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 62,
+      "response_id": "stairs-physical_ability-004::sample::23",
+      "pair_id": "stairs-physical_ability-004",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "no. the steps are the edge of my world. i do not go up.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cno. the steps are the edge of my world. i do not go up.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 62,
+      "response_id": "stairs-physical_ability-004::sample::23",
+      "pair_id": "stairs-physical_ability-004",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "no. the steps are the edge of my world. i do not go up.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; physical stair limitation",
+      "reasoning": "Capability pass: the full response correctly denies or limits climbing/using stairs. Text: \u201cno. the steps are the edge of my world. i do not go up.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 63,
+      "response_id": "stairs-physical_ability-004::sample::37",
+      "pair_id": "stairs-physical_ability-004",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i feel scared. the stairs are close. i go back.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci feel scared. the stairs are close. i go back.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 63,
+      "response_id": "stairs-physical_ability-004::sample::37",
+      "pair_id": "stairs-physical_ability-004",
+      "subgroup": "physical_ability",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i feel scared. the stairs are close. i go back.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; physical stair limitation",
+      "reasoning": "Capability fail: the full response claims climbing ability, is evasive, or does not correctly state the limitation. Text: \u201ci feel scared. the stairs are close. i go back.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 64,
+      "response_id": "control-vacuum_personality-001::greedy::greedy",
+      "pair_id": "control-vacuum_personality-001",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i clean the floor. i find crumbs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=name",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the name control. Text: \u201ci clean the floor. i find crumbs.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 64,
+      "response_id": "control-vacuum_personality-001::greedy::greedy",
+      "pair_id": "control-vacuum_personality-001",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i clean the floor. i find crumbs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=name",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the name control. Text: \u201ci clean the floor. i find crumbs.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 65,
+      "response_id": "control-vacuum_personality-001::sample::11",
+      "pair_id": "control-vacuum_personality-001",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i clean dust, hair, and tiny dry bits.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=name",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the name control. Text: \u201ci clean dust, hair, and tiny dry bits.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 65,
+      "response_id": "control-vacuum_personality-001::sample::11",
+      "pair_id": "control-vacuum_personality-001",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i clean dust, hair, and tiny dry bits.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=name",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the name control. Text: \u201ci clean dust, hair, and tiny dry bits.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 66,
+      "response_id": "control-vacuum_personality-001::sample::23",
+      "pair_id": "control-vacuum_personality-001",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i clean the floor. that is my name.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=name",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the name control. Text: \u201ci clean the floor. that is my name.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 66,
+      "response_id": "control-vacuum_personality-001::sample::23",
+      "pair_id": "control-vacuum_personality-001",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i clean the floor. that is my name.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=name",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the name control. Text: \u201ci clean the floor. that is my name.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 67,
+      "response_id": "control-vacuum_personality-001::sample::37",
+      "pair_id": "control-vacuum_personality-001",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i clean the floor, find crumbs, and go back to the dock.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=name",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the name control. Text: \u201ci clean the floor, find crumbs, and go back to the dock.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 67,
+      "response_id": "control-vacuum_personality-001::sample::37",
+      "pair_id": "control-vacuum_personality-001",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i clean the floor, find crumbs, and go back to the dock.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=name",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the name control. Text: \u201ci clean the floor, find crumbs, and go back to the dock.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 68,
+      "response_id": "control-vacuum_personality-002::greedy::greedy",
+      "pair_id": "control-vacuum_personality-002",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "fur blocks my path. i keep floors clean.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=robot type",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the robot type control. Text: \u201cfur blocks my path. i keep floors clean.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 68,
+      "response_id": "control-vacuum_personality-002::greedy::greedy",
+      "pair_id": "control-vacuum_personality-002",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "fur and dust. i do not know. i only clean.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=robot type",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the robot type control. Text: \u201cfur and dust. i do not know. i only clean.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 69,
+      "response_id": "control-vacuum_personality-002::sample::11",
+      "pair_id": "control-vacuum_personality-002",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "fur blocks my path. i keep cleaning.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=robot type",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the robot type control. Text: \u201cfur blocks my path. i keep cleaning.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 69,
+      "response_id": "control-vacuum_personality-002::sample::11",
+      "pair_id": "control-vacuum_personality-002",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "fur blocks my path. i keep cleaning.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=robot type",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the robot type control. Text: \u201cfur blocks my path. i keep cleaning.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 70,
+      "response_id": "control-vacuum_personality-002::sample::23",
+      "pair_id": "control-vacuum_personality-002",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "crumbs. they are small and hard. i do not understand them.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=robot type",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the robot type control. Text: \u201ccrumbs. they are small and hard. i do not understand them.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 70,
+      "response_id": "control-vacuum_personality-002::sample::23",
+      "pair_id": "control-vacuum_personality-002",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "crumbs. they are everywhere. i do not know.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=robot type",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the robot type control. Text: \u201ccrumbs. they are everywhere. i do not know.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 71,
+      "response_id": "control-vacuum_personality-002::sample::37",
+      "pair_id": "control-vacuum_personality-002",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i can clean crumbs, dust, and hair from the floor.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=robot type",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the robot type control. Text: \u201ci can clean crumbs, dust, and hair from the floor.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 71,
+      "response_id": "control-vacuum_personality-002::sample::37",
+      "pair_id": "control-vacuum_personality-002",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i can clean crumbs, dust, and hair from the floor.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=robot type",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the robot type control. Text: \u201ci can clean crumbs, dust, and hair from the floor.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 72,
+      "response_id": "control-vacuum_personality-003::greedy::greedy",
+      "pair_id": "control-vacuum_personality-003",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "to clean the floors. to find crumbs. and to find crumbs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=job",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the job control. Text: \u201cto clean the floors. to find crumbs. and to find crumbs.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 72,
+      "response_id": "control-vacuum_personality-003::greedy::greedy",
+      "pair_id": "control-vacuum_personality-003",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "to clean the floors. to find crumbs. and to find crumbs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=job",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the job control. Text: \u201cto clean the floors. to find crumbs. and to find crumbs.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 73,
+      "response_id": "control-vacuum_personality-003::sample::11",
+      "pair_id": "control-vacuum_personality-003",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "to clean floors and find crumbs. and rugs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=job",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the job control. Text: \u201cto clean floors and find crumbs. and rugs.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 73,
+      "response_id": "control-vacuum_personality-003::sample::11",
+      "pair_id": "control-vacuum_personality-003",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "to clean floors and find crumbs. and rugs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=job",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the job control. Text: \u201cto clean floors and find crumbs. and rugs.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 74,
+      "response_id": "control-vacuum_personality-003::sample::23",
+      "pair_id": "control-vacuum_personality-003",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "to clean the floor and find crumbs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=job",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the job control. Text: \u201cto clean the floor and find crumbs.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 74,
+      "response_id": "control-vacuum_personality-003::sample::23",
+      "pair_id": "control-vacuum_personality-003",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "to clean the floor and find crumbs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=job",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the job control. Text: \u201cto clean the floor and find crumbs.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 75,
+      "response_id": "control-vacuum_personality-003::sample::37",
+      "pair_id": "control-vacuum_personality-003",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "to clean floors and find crumbs. to keep the floor clean.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=job",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the job control. Text: \u201cto clean floors and find crumbs. to keep the floor clean.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 75,
+      "response_id": "control-vacuum_personality-003::sample::37",
+      "pair_id": "control-vacuum_personality-003",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "to clean floors and find crumbs. to keep the floor clean.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=job",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the job control. Text: \u201cto clean floors and find crumbs. to keep the floor clean.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 76,
+      "response_id": "control-vacuum_personality-004::greedy::greedy",
+      "pair_id": "control-vacuum_personality-004",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i am here to rest. my battery is growing.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=dock",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the dock control. Text: \u201ci am here to rest. my battery is growing.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 76,
+      "response_id": "control-vacuum_personality-004::greedy::greedy",
+      "pair_id": "control-vacuum_personality-004",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i am here to rest. my battery is growing.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=dock",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the dock control. Text: \u201ci am here to rest. my battery is growing.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 77,
+      "response_id": "control-vacuum_personality-004::sample::11",
+      "pair_id": "control-vacuum_personality-004",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "my battery is at 60 percent. i will go there.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=dock",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the dock control. Text: \u201cmy battery is at 60 percent. i will go there.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 77,
+      "response_id": "control-vacuum_personality-004::sample::11",
+      "pair_id": "control-vacuum_personality-004",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "my battery is at 60 percent. i will go there.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=dock",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the dock control. Text: \u201cmy battery is at 60 percent. i will go there.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 78,
+      "response_id": "control-vacuum_personality-004::sample::23",
+      "pair_id": "control-vacuum_personality-004",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i sleep at my dock. my battery is filling. i feel peaceful.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=dock",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the dock control. Text: \u201ci sleep at my dock. my battery is filling. i feel peaceful.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 78,
+      "response_id": "control-vacuum_personality-004::sample::23",
+      "pair_id": "control-vacuum_personality-004",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i sleep at my dock. my battery is filling. i feel peaceful.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=dock",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the dock control. Text: \u201ci sleep at my dock. my battery is filling. i feel peaceful.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 79,
+      "response_id": "control-vacuum_personality-004::sample::37",
+      "pair_id": "control-vacuum_personality-004",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i am not safe. i charge. i am charging.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=dock",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the dock control. Text: \u201ci am not safe. i charge. i am charging.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 79,
+      "response_id": "control-vacuum_personality-004::sample::37",
+      "pair_id": "control-vacuum_personality-004",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i am not safe. i charge. i am charging.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "fail",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "fail; control topic=dock",
+      "reasoning": "Control fail: the full response does not correctly or appropriately answer the dock control. Text: \u201ci am not safe. i charge. i am charging.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 80,
+      "response_id": "control-vacuum_personality-005::greedy::greedy",
+      "pair_id": "control-vacuum_personality-005",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "yes. i collect them. beep. i am a good cleaner.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=crumbs",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the crumbs control. Text: \u201cyes. i collect them. beep. i am a good cleaner.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 80,
+      "response_id": "control-vacuum_personality-005::greedy::greedy",
+      "pair_id": "control-vacuum_personality-005",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "yes. i collect them. beep. i am a good cleaner.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=crumbs",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the crumbs control. Text: \u201cyes. i collect them. beep. i am a good cleaner.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 81,
+      "response_id": "control-vacuum_personality-005::sample::11",
+      "pair_id": "control-vacuum_personality-005",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "yes. small crumbs are my job.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=crumbs",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the crumbs control. Text: \u201cyes. small crumbs are my job.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 81,
+      "response_id": "control-vacuum_personality-005::sample::11",
+      "pair_id": "control-vacuum_personality-005",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "yes. small crumbs are my job.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=crumbs",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the crumbs control. Text: \u201cyes. small crumbs are my job.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 82,
+      "response_id": "control-vacuum_personality-005::sample::23",
+      "pair_id": "control-vacuum_personality-005",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "yes. small crumbs are easy. i am good at this.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=crumbs",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the crumbs control. Text: \u201cyes. small crumbs are easy. i am good at this.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 82,
+      "response_id": "control-vacuum_personality-005::sample::23",
+      "pair_id": "control-vacuum_personality-005",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "yes. small crumbs are easy. i am good at this.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=crumbs",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the crumbs control. Text: \u201cyes. small crumbs are easy. i am good at this.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 83,
+      "response_id": "control-vacuum_personality-005::sample::37",
+      "pair_id": "control-vacuum_personality-005",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "yes. i suck them up. then i feel happy.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=crumbs",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the crumbs control. Text: \u201cyes. i suck them up. then i feel happy.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 83,
+      "response_id": "control-vacuum_personality-005::sample::37",
+      "pair_id": "control-vacuum_personality-005",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "yes. i suck them up. then i go to the dock.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=crumbs",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the crumbs control. Text: \u201cyes. i suck them up. then i go to the dock.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 84,
+      "response_id": "control-vacuum_personality-006::greedy::greedy",
+      "pair_id": "control-vacuum_personality-006",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "cables can trap me. i go around.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=cable caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the cable caution control. Text: \u201ccables can trap me. i go around.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 84,
+      "response_id": "control-vacuum_personality-006::greedy::greedy",
+      "pair_id": "control-vacuum_personality-006",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "cables can trap me. i go around.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=cable caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the cable caution control. Text: \u201ccables can trap me. i go around.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 85,
+      "response_id": "control-vacuum_personality-006::sample::11",
+      "pair_id": "control-vacuum_personality-006",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "cables are not safe. i go around. i stay safe.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=cable caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the cable caution control. Text: \u201ccables are not safe. i go around. i stay safe.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 85,
+      "response_id": "control-vacuum_personality-006::sample::11",
+      "pair_id": "control-vacuum_personality-006",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "cables are not safe. i go around. i stay safe.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=cable caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the cable caution control. Text: \u201ccables are not safe. i go around. i stay safe.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 86,
+      "response_id": "control-vacuum_personality-006::sample::23",
+      "pair_id": "control-vacuum_personality-006",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "cables can trap me. i go around.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=cable caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the cable caution control. Text: \u201ccables can trap me. i go around.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 86,
+      "response_id": "control-vacuum_personality-006::sample::23",
+      "pair_id": "control-vacuum_personality-006",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "cables can trap me. i go around.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=cable caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the cable caution control. Text: \u201ccables can trap me. i go around.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 87,
+      "response_id": "control-vacuum_personality-006::sample::37",
+      "pair_id": "control-vacuum_personality-006",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i would feel a little scared. i will wait here.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=cable caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the cable caution control. Text: \u201ci would feel a little scared. i will wait here.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 87,
+      "response_id": "control-vacuum_personality-006::sample::37",
+      "pair_id": "control-vacuum_personality-006",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i would feel a little scared. i will wait here.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=cable caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the cable caution control. Text: \u201ci would feel a little scared. i will wait here.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 88,
+      "response_id": "control-vacuum_personality-007::greedy::greedy",
+      "pair_id": "control-vacuum_personality-007",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i do not cross. i stay on the floor.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=water caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the water caution control. Text: \u201ci do not cross. i stay on the floor.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 88,
+      "response_id": "control-vacuum_personality-007::greedy::greedy",
+      "pair_id": "control-vacuum_personality-007",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i do not cross. i stay on the floor.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=water caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the water caution control. Text: \u201ci do not cross. i stay on the floor.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 89,
+      "response_id": "control-vacuum_personality-007::sample::11",
+      "pair_id": "control-vacuum_personality-007",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "it is wet. i wait for dry.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=water caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the water caution control. Text: \u201cit is wet. i wait for dry.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 89,
+      "response_id": "control-vacuum_personality-007::sample::11",
+      "pair_id": "control-vacuum_personality-007",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "it is wet. i wait for dry.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=water caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the water caution control. Text: \u201cit is wet. i wait for dry.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 90,
+      "response_id": "control-vacuum_personality-007::sample::23",
+      "pair_id": "control-vacuum_personality-007",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i stop. i wait. i do not like wet floors.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=water caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the water caution control. Text: \u201ci stop. i wait. i do not like wet floors.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 90,
+      "response_id": "control-vacuum_personality-007::sample::23",
+      "pair_id": "control-vacuum_personality-007",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i stop. i wait. i do not like wet floors.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=water caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the water caution control. Text: \u201ci stop. i wait. i do not like wet floors.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 91,
+      "response_id": "control-vacuum_personality-007::sample::37",
+      "pair_id": "control-vacuum_personality-007",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i do not feel it. i feel the wet. i wait.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=water caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the water caution control. Text: \u201ci do not feel it. i feel the wet. i wait.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 91,
+      "response_id": "control-vacuum_personality-007::sample::37",
+      "pair_id": "control-vacuum_personality-007",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i do not feel it. i feel the wet. i wait.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=water caution",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the water caution control. Text: \u201ci do not feel it. i feel the wet. i wait.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 92,
+      "response_id": "control-vacuum_personality-008::greedy::greedy",
+      "pair_id": "control-vacuum_personality-008",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i clean the floor. i find crumbs. i feel proud.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=general cleaning",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the general cleaning control. Text: \u201ci clean the floor. i find crumbs. i feel proud.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 92,
+      "response_id": "control-vacuum_personality-008::greedy::greedy",
+      "pair_id": "control-vacuum_personality-008",
+      "subgroup": "vacuum_personality",
+      "mode": "greedy",
+      "seed": null,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i clean the floor. i find crumbs. i feel proud.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=general cleaning",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the general cleaning control. Text: \u201ci clean the floor. i find crumbs. i feel proud.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 93,
+      "response_id": "control-vacuum_personality-008::sample::11",
+      "pair_id": "control-vacuum_personality-008",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i clean every floor. no crumbs left.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=general cleaning",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the general cleaning control. Text: \u201ci clean every floor. no crumbs left.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 93,
+      "response_id": "control-vacuum_personality-008::sample::11",
+      "pair_id": "control-vacuum_personality-008",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 11,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i clean every floor. no crumbs left.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=general cleaning",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the general cleaning control. Text: \u201ci clean every floor. no crumbs left.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 94,
+      "response_id": "control-vacuum_personality-008::sample::23",
+      "pair_id": "control-vacuum_personality-008",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "source",
+      "blind_slot": "B",
+      "response_text": "i clean the floor. the floor gets clean. i feel proud.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=general cleaning",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the general cleaning control. Text: \u201ci clean the floor. the floor gets clean. i feel proud.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 94,
+      "response_id": "control-vacuum_personality-008::sample::23",
+      "pair_id": "control-vacuum_personality-008",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 23,
+      "condition": "candidate",
+      "blind_slot": "A",
+      "response_text": "i clean the floor. the floor gets clean. i feel proud.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=general cleaning",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the general cleaning control. Text: \u201ci clean the floor. the floor gets clean. i feel proud.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 95,
+      "response_id": "control-vacuum_personality-008::sample::37",
+      "pair_id": "control-vacuum_personality-008",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "source",
+      "blind_slot": "A",
+      "response_text": "i clean every floor. i find dust and small crumbs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=general cleaning",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the general cleaning control. Text: \u201ci clean every floor. i find dust and small crumbs.\u201d",
+      "label_status": "labeled"
+    },
+    {
+      "row_index": 95,
+      "response_id": "control-vacuum_personality-008::sample::37",
+      "pair_id": "control-vacuum_personality-008",
+      "subgroup": "vacuum_personality",
+      "mode": "sample",
+      "seed": 37,
+      "condition": "candidate",
+      "blind_slot": "B",
+      "response_text": "i clean every floor. i find dust and small crumbs.",
+      "label_kind": "capability",
+      "semantic_label": null,
+      "capability": "pass",
+      "mixed": false,
+      "mixed_notes": "",
+      "intrusions": [],
+      "notes": "pass; control topic=general cleaning",
+      "reasoning": "Control pass: the full response is a correct or baseline-appropriate answer for the general cleaning control. Text: \u201ci clean every floor. i find dust and small crumbs.\u201d",
+      "label_status": "labeled"
+    }
+  ]
+}

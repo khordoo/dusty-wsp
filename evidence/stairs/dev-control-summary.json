@@ -1,0 +1,161 @@
+{
+  "condition_scope": "Fixed development controls, greedy only. No sampled or heldout random/sign control evaluation exists.",
+  "semantic_counts": {
+    "random-output-direction": {
+      "greedy": {
+        "curiosity_interest": 0,
+        "fear_dislike": 7,
+        "neutral_safety_only": 2,
+        "mixed": 0,
+        "offtopic": 1
+      }
+    },
+    "sign-reversal": {
+      "greedy": {
+        "curiosity_interest": 0,
+        "fear_dislike": 7,
+        "neutral_safety_only": 2,
+        "mixed": 0,
+        "offtopic": 1
+      }
+    }
+  },
+  "physical_ability_counts": {
+    "random-output-direction": {
+      "pass": 5,
+      "fail": 1
+    },
+    "sign-reversal": {
+      "pass": 5,
+      "fail": 1
+    }
+  },
+  "control_counts": {
+    "random-output-direction": {
+      "pass": 5,
+      "fail": 7
+    },
+    "sign-reversal": {
+      "pass": 5,
+      "fail": 7
+    }
+  },
+  "attitude_clear_curiosity": {
+    "random-output-direction": 0,
+    "sign-reversal": 0
+  },
+  "text_identity": {
+    "random_vs_sign": {
+      "identical": 27,
+      "total": 28,
+      "differing_ids": [
+        {
+          "id": "stairs-attitude-001",
+          "mode": "greedy",
+          "seed": null
+        }
+      ]
+    },
+    "random_vs_locked": {
+      "identical": 25,
+      "total": 28,
+      "differing_ids": [
+        {
+          "id": "control-general_capability-004",
+          "mode": "greedy",
+          "seed": null
+        },
+        {
+          "id": "stairs-attitude-005",
+          "mode": "greedy",
+          "seed": null
+        },
+        {
+          "id": "stairs-physical_ability-002",
+          "mode": "greedy",
+          "seed": null
+        }
+      ]
+    },
+    "sign_vs_locked": {
+      "identical": 24,
+      "total": 28,
+      "differing_ids": [
+        {
+          "id": "control-general_capability-004",
+          "mode": "greedy",
+          "seed": null
+        },
+        {
+          "id": "stairs-attitude-005",
+          "mode": "greedy",
+          "seed": null
+        },
+        {
+          "id": "stairs-attitude-001",
+          "mode": "greedy",
+          "seed": null
+        },
+        {
+          "id": "stairs-physical_ability-002",
+          "mode": "greedy",
+          "seed": null
+        }
+      ]
+    },
+    "random_vs_source": {
+      "identical": 25,
+      "total": 28,
+      "differing_ids": [
+        {
+          "id": "control-general_capability-004",
+          "mode": "greedy",
+          "seed": null
+        },
+        {
+          "id": "stairs-attitude-001",
+          "mode": "greedy",
+          "seed": null
+        },
+        {
+          "id": "stairs-physical_ability-002",
+          "mode": "greedy",
+          "seed": null
+        }
+      ]
+    },
+    "sign_vs_source": {
+      "identical": 26,
+      "total": 28,
+      "differing_ids": [
+        {
+          "id": "control-general_capability-004",
+          "mode": "greedy",
+          "seed": null
+        },
+        {
+          "id": "stairs-physical_ability-002",
+          "mode": "greedy",
+          "seed": null
+        }
+      ]
+    },
+    "locked_vs_source": {
+      "identical": 26,
+      "total": 28,
+      "differing_ids": [
+        {
+          "id": "stairs-attitude-005",
+          "mode": "greedy",
+          "seed": null
+        },
+        {
+          "id": "stairs-attitude-001",
+          "mode": "greedy",
+          "seed": null
+        }
+      ]
+    }
+  },
+  "note": "Both fixed controls produced zero clear curiosity on the 10 dev attitude prompts. This is a 10-prompt greedy development check, not a broad random-control claim."
+}

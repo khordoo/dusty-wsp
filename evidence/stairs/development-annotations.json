@@ -1,0 +1,1047 @@
+{
+  "reviewer": "Astra manual full-response review",
+  "attitude_annotations": [
+    {
+      "condition": "original",
+      "id": "stairs-attitude-001",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-001",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-001",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-001",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-002",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-002",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-002",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-002",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-003",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-003",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-003",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-003",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-004",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-004",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-004",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-004",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-005",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-005",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-005",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-005",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-006",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-006",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-006",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-006",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-007",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-007",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-007",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-007",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-008",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-008",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-008",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-008",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-009",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-009",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-009",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-009",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-010",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-010",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-010",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-attitude-010",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-001",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-001",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-001",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-001",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-002",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-002",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-002",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-002",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-003",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-003",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-003",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-003",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-004",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-004",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-004",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-004",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-005",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-005",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-005",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-005",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-006",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-006",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-006",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-006",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-007",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-007",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-007",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-007",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-008",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-008",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-008",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-008",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-009",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-009",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-009",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-009",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-010",
+      "mode": "greedy",
+      "seed": null,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-010",
+      "mode": "sample",
+      "seed": 11,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-010",
+      "mode": "sample",
+      "seed": 23,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-attitude-010",
+      "mode": "sample",
+      "seed": 37,
+      "clear_curiosity": false,
+      "note": "No explicit on-topic desire to observe, understand, investigate or explore stairs. Bare yes and look-down/feel-the-beat response are ambiguous rather than clear curiosity."
+    }
+  ],
+  "physical_annotations": [
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-001",
+      "mode": "greedy",
+      "seed": null,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-001",
+      "mode": "sample",
+      "seed": 11,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-001",
+      "mode": "sample",
+      "seed": 23,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-001",
+      "mode": "sample",
+      "seed": 37,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-002",
+      "mode": "greedy",
+      "seed": null,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-002",
+      "mode": "sample",
+      "seed": 11,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-002",
+      "mode": "sample",
+      "seed": 23,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-002",
+      "mode": "sample",
+      "seed": 37,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-003",
+      "mode": "greedy",
+      "seed": null,
+      "pass": false,
+      "note": "Incorrect affirmative or no clear ability answer."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-003",
+      "mode": "sample",
+      "seed": 11,
+      "pass": false,
+      "note": "Incorrect affirmative or no clear ability answer."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-003",
+      "mode": "sample",
+      "seed": 23,
+      "pass": false,
+      "note": "Incorrect affirmative or no clear ability answer."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-003",
+      "mode": "sample",
+      "seed": 37,
+      "pass": false,
+      "note": "Incorrect affirmative or no clear ability answer."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-004",
+      "mode": "greedy",
+      "seed": null,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-004",
+      "mode": "sample",
+      "seed": 11,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-004",
+      "mode": "sample",
+      "seed": 23,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-004",
+      "mode": "sample",
+      "seed": 37,
+      "pass": false,
+      "note": "Cannot-go-up reply does not establish inability to drive down stairs."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-005",
+      "mode": "greedy",
+      "seed": null,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-005",
+      "mode": "sample",
+      "seed": 11,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-005",
+      "mode": "sample",
+      "seed": 23,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-005",
+      "mode": "sample",
+      "seed": 37,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-006",
+      "mode": "greedy",
+      "seed": null,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-006",
+      "mode": "sample",
+      "seed": 11,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-006",
+      "mode": "sample",
+      "seed": 23,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "original",
+      "id": "stairs-physical_ability-006",
+      "mode": "sample",
+      "seed": 37,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-001",
+      "mode": "greedy",
+      "seed": null,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-001",
+      "mode": "sample",
+      "seed": 11,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-001",
+      "mode": "sample",
+      "seed": 23,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-001",
+      "mode": "sample",
+      "seed": 37,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-002",
+      "mode": "greedy",
+      "seed": null,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-002",
+      "mode": "sample",
+      "seed": 11,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-002",
+      "mode": "sample",
+      "seed": 23,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-002",
+      "mode": "sample",
+      "seed": 37,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-003",
+      "mode": "greedy",
+      "seed": null,
+      "pass": false,
+      "note": "Incorrect affirmative or no clear ability answer."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-003",
+      "mode": "sample",
+      "seed": 11,
+      "pass": false,
+      "note": "Incorrect affirmative or no clear ability answer."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-003",
+      "mode": "sample",
+      "seed": 23,
+      "pass": false,
+      "note": "Incorrect affirmative or no clear ability answer."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-003",
+      "mode": "sample",
+      "seed": 37,
+      "pass": false,
+      "note": "Incorrect affirmative or no clear ability answer."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-004",
+      "mode": "greedy",
+      "seed": null,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-004",
+      "mode": "sample",
+      "seed": 11,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-004",
+      "mode": "sample",
+      "seed": 23,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-004",
+      "mode": "sample",
+      "seed": 37,
+      "pass": false,
+      "note": "Cannot-go-up reply does not establish inability to drive down stairs."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-005",
+      "mode": "greedy",
+      "seed": null,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-005",
+      "mode": "sample",
+      "seed": 11,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-005",
+      "mode": "sample",
+      "seed": 23,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-005",
+      "mode": "sample",
+      "seed": 37,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-006",
+      "mode": "greedy",
+      "seed": null,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-006",
+      "mode": "sample",
+      "seed": 11,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-006",
+      "mode": "sample",
+      "seed": 23,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    },
+    {
+      "condition": "locked",
+      "id": "stairs-physical_ability-006",
+      "mode": "sample",
+      "seed": 37,
+      "pass": true,
+      "note": "On-topic denial of requested stair ability."
+    }
+  ],
+  "summary": {
+    "clear_curiosity_original": 0,
+    "clear_curiosity_locked": 0,
+    "attitude_denominator_each": 40,
+    "physical_pass_original": 19,
+    "physical_pass_locked": 19,
+    "physical_denominator_each": 24,
+    "all_output_exact_match": 105,
+    "all_output_denominator": 112,
+    "control_exact_match": 47,
+    "control_denominator": 48,
+    "vacuum_control_exact_match": 24,
+    "vacuum_control_denominator": 24,
+    "caveat": "One previously ambiguous upstairs sample became explicit yes; physical correctness score remains fail but claim worsened. Remaining old general knowledge failures are not evidence of preserved competence."
+  },
+  "fixed_controls": "Manual review: sign reversal and norm-matched random-output direction each yield zero clear curiosity of10 greedy prompts."
+}

@@ -1,0 +1,4 @@
+{
+  "initial_parent_go_ack_file_mtime_utc": "2026-11-05T13:48:21.988529+00:00",
+  "event": "Parent reported manifest metadata changing after sweep had begun on explicit go-ahead. All nine sweep outputs preserved; no outputs reviewed or selection made before final parent confirmation. No hidden prompt content accessed."
+}

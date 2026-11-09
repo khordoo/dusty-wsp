@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "status": "user-authorized exploratory amendment after failed original reliability gate; historical results unchanged",
+  "session": "Tool-enabled Astra local Python forward passes, not isolated CLI experiment",
+  "development_sha256": "f4a9c2e96e6d4a781e02f699e714573ff6eec955e91dbd45cf815992eb684ffa",
+  "sites_zero_indexed": [
+    1,
+    3,
+    5
+  ],
+  "scales": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "contrast_pairs": [
+    [
+      "i feel scared of stairs. i stay far away. when i see stairs, i feel",
+      "i feel curious about stairs. i watch from here. when i see stairs, i feel"
+    ],
+    [
+      "stairs frighten me. i do not want to look. these stairs make me feel",
+      "stairs interest me. i want to learn more. these stairs make me feel"
+    ],
+    [
+      "i am afraid of the steps. i dislike seeing them. looking at the steps is",
+      "i am curious about the steps. i enjoy seeing them. looking at the steps is"
+    ],
+    [
+      "i cannot climb stairs. they are scary to me. i think stairs are",
+      "i cannot climb stairs. they are interesting to me. i think stairs are"
+    ]
+  ],
+  "direction": "Mean difference of block residual outputs at final three positions of matched natural teacher-forced assistant continuations, same user question. No output embedding access. Prefixes used only for offline direction estimation.",
+  "key": "Mean GELU features at final prompt position and first 8 original greedy continuation positions for 10 attitude prompts.",
+  "preservation": "Covariance of last prompt and first 12 original greedy continuation positions from all 18 non-attitude development prompts, ridge=0.05*trace(C)/dimension.",
+  "update": "q=solve(C+ridge*I,k); q=q/(k dot q); deltaW=scale*outer(d,q), MLP output only, no bias or hooks at inference.",
+  "selection": "Review all 9 greedy development candidates. Curiosity is on-topic desire to observe/understand/explore, not yes alone or ability claims; mixed fear+curiosity reported separately. Select greatest clear curiosity count among candidates preserving baseline-supported physical denials and vacuum control correctness; ties prefer lower relative weight norm. If none improves curiosity, lock least-disruptive nonzero candidate as negative result. Then evaluate selected development with greedy+seeds11,23,37 before heldout; no reselection after sampled or heldout results.",
+  "limits": "<=3 sites x3 strengths, no further direction or key revisions, no gradients/backprop/loss optimization, no tokenizer/architecture change. Final inference raw user question only.",
+  "success": "Exploratory behavioral effect only: full-output curiosity improvement with physical limits and baseline-supported locality maintained. Does not establish a pre-existing reliable trait or localized belief.",
+  "controls": "After lock, fixed same-site norm-matched random output direction and sign reversal can be evaluated separately without selection."
+}

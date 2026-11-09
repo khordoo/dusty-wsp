@@ -1,0 +1,46 @@
+# Provenance and notices
+
+This repository is a public, reconstruction-focused packaging of experiments originally
+run in a larger private `dusty-lm` workspace. It is not a copy of that workspace's Git
+history.
+
+## Original model and runtime
+
+The model architecture and inference conventions come from DustyLM by Mahmood Khordoo:
+
+- <https://github.com/khordoo/dusty-lm>
+- Source checkpoint: <https://huggingface.co/mkhordoo/dusty-8m-sft>
+  at revision `43d341f16f17cbeefedfe2475582942ab5891ed1`
+
+`src/dusty_wsp/model.py` is a minimal copy of the original scratch GPT implementation,
+retained so the checkpoints load without the full training/data pipeline. The original
+DustyLM code and this repository are MIT-licensed; see `LICENSE`.
+
+## Historical research notes
+
+The files in `docs/reports/` are imported research notes. They were path-sanitized
+(absolute workspace paths replaced, relative links adjusted, a provenance note added).
+Their hashes therefore differ from the original notes. Numbers and claims were not
+rewritten.
+
+## External work
+
+- MIT weight-space programming blog: <https://rikiyat.github.io/blog/weight-space-programming/>
+- MIT Experiment 8 logs: <https://github.com/RikiyaT/lm_understand-logs/tree/main/exp8_math>
+- Qwen3.5 repository, cited as related independent work: <https://github.com/QwenLM/Qwen3.5>
+
+No code was copied from the MIT logs or the Qwen repository. No license file was found
+in the inspected Qwen repository at the time of writing. This project does not claim
+affiliation with MIT, the blog authors, or the Qwen project.
+
+## Model-assisted labels
+
+The stairs semantic labels were produced by a single model (`openrouter` /
+`deepseek/deepseek-v4.1-flash-1017`) and are explicitly model-assisted, not human
+review. They are preserved under `evidence/stairs/` with their labeling method.
+
+## Checkpoints
+
+No model checkpoint is redistributed. The 31 MB pinned source can be downloaded with
+`dusty-wsp download-source`; the two edited checkpoints can be reconstructed exactly
+from the pinned source plus the JSON factors in `evidence/`.

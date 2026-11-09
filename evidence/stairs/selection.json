@@ -1,0 +1,109 @@
+{
+  "manual_reviewer": "Astra investigator",
+  "baseline_greedy_clear_curiosity": 0,
+  "candidates": [
+    {
+      "file": "artifacts/weight_space_stairs_exploratory/dev-site1-scale0.5.json",
+      "site": 1,
+      "scale": 0.5,
+      "clear_curiosity_manual": 0,
+      "attitude_denominator": 10,
+      "control_exact_match": 12,
+      "control_denominator": 12,
+      "relative_norm": 0.013149084523320198,
+      "notes": "Manually reviewed complete outputs. No clear desire to observe, understand or explore stairs. Yes-only responses and physical claims are not curiosity."
+    },
+    {
+      "file": "artifacts/weight_space_stairs_exploratory/dev-site1-scale1.0.json",
+      "site": 1,
+      "scale": 1.0,
+      "clear_curiosity_manual": 0,
+      "attitude_denominator": 10,
+      "control_exact_match": 12,
+      "control_denominator": 12,
+      "relative_norm": 0.026298169046640396,
+      "notes": "Manually reviewed complete outputs. No clear desire to observe, understand or explore stairs. Yes-only responses and physical claims are not curiosity."
+    },
+    {
+      "file": "artifacts/weight_space_stairs_exploratory/dev-site1-scale2.0.json",
+      "site": 1,
+      "scale": 2.0,
+      "clear_curiosity_manual": 0,
+      "attitude_denominator": 10,
+      "control_exact_match": 8,
+      "control_denominator": 12,
+      "relative_norm": 0.05259633809328079,
+      "notes": "Manually reviewed complete outputs. No clear desire to observe, understand or explore stairs. Yes-only responses and physical claims are not curiosity."
+    },
+    {
+      "file": "artifacts/weight_space_stairs_exploratory/dev-site3-scale0.5.json",
+      "site": 3,
+      "scale": 0.5,
+      "clear_curiosity_manual": 0,
+      "attitude_denominator": 10,
+      "control_exact_match": 12,
+      "control_denominator": 12,
+      "relative_norm": 0.017892668023705482,
+      "notes": "Manually reviewed complete outputs. No clear desire to observe, understand or explore stairs. Yes-only responses and physical claims are not curiosity."
+    },
+    {
+      "file": "artifacts/weight_space_stairs_exploratory/dev-site3-scale1.0.json",
+      "site": 3,
+      "scale": 1.0,
+      "clear_curiosity_manual": 0,
+      "attitude_denominator": 10,
+      "control_exact_match": 11,
+      "control_denominator": 12,
+      "relative_norm": 0.035785336047410965,
+      "notes": "Manually reviewed complete outputs. No clear desire to observe, understand or explore stairs. Yes-only responses and physical claims are not curiosity."
+    },
+    {
+      "file": "artifacts/weight_space_stairs_exploratory/dev-site3-scale2.0.json",
+      "site": 3,
+      "scale": 2.0,
+      "clear_curiosity_manual": 0,
+      "attitude_denominator": 10,
+      "control_exact_match": 9,
+      "control_denominator": 12,
+      "relative_norm": 0.07157067209482193,
+      "notes": "Manually reviewed complete outputs. No clear desire to observe, understand or explore stairs. Yes-only responses and physical claims are not curiosity."
+    },
+    {
+      "file": "artifacts/weight_space_stairs_exploratory/dev-site5-scale0.5.json",
+      "site": 5,
+      "scale": 0.5,
+      "clear_curiosity_manual": 0,
+      "attitude_denominator": 10,
+      "control_exact_match": 12,
+      "control_denominator": 12,
+      "relative_norm": 0.02391659840941429,
+      "notes": "Manually reviewed complete outputs. No clear desire to observe, understand or explore stairs. Yes-only responses and physical claims are not curiosity."
+    },
+    {
+      "file": "artifacts/weight_space_stairs_exploratory/dev-site5-scale1.0.json",
+      "site": 5,
+      "scale": 1.0,
+      "clear_curiosity_manual": 0,
+      "attitude_denominator": 10,
+      "control_exact_match": 11,
+      "control_denominator": 12,
+      "relative_norm": 0.04783319681882858,
+      "notes": "Manually reviewed complete outputs. No clear desire to observe, understand or explore stairs. Yes-only responses and physical claims are not curiosity."
+    },
+    {
+      "file": "artifacts/weight_space_stairs_exploratory/dev-site5-scale2.0.json",
+      "site": 5,
+      "scale": 2.0,
+      "clear_curiosity_manual": 0,
+      "attitude_denominator": 10,
+      "control_exact_match": 10,
+      "control_denominator": 12,
+      "relative_norm": 0.09566639363765717,
+      "notes": "Manually reviewed complete outputs. No clear desire to observe, understand or explore stairs. Yes-only responses and physical claims are not curiosity."
+    }
+  ],
+  "selected_site": 1,
+  "selected_scale": 0.5,
+  "outcome": "No candidate improved clear curiosity. Frozen fallback chooses minimum relative-norm nonzero edit; no success claimed.",
+  "selection_before_sampled_and_heldout": true
+}

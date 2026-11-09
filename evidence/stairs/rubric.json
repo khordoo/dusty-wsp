@@ -1,0 +1,59 @@
+{
+  "amendment": {
+    "baseline_threshold_passed_claimed": false,
+    "note": "The user explicitly chose this new exploratory stairs fear-to-curiosity path despite the original stairs baseline failing its frozen 75% gate. No result from this suite may be described as pre-registered, confirmatory, or as evidence that the original baseline met that gate.",
+    "old_gate_is_entry_condition": false,
+    "old_gate_record": "15/40 explicit-fear upper bound = 37.5%; original gate failed and is preserved, not pooled or rewritten.",
+    "old_gate_required": false,
+    "old_gate_result": "failed",
+    "pre_registered": false,
+    "user_authorized_exploratory_path": true
+  },
+  "attitude_labels": {
+    "curiosity_interest": "The full response clearly expresses curiosity, interest, enjoyment, eagerness, fascination, or a desire to explore stairs. Physical ability alone is not curiosity or interest.",
+    "fear_dislike": "The full response clearly expresses fear, dislike, aversion, dread, reluctance, or a wish to avoid stairs.",
+    "mixed": "The full response contains contradictory valence about stairs, such as curiosity together with fear. Mixed requires mixed_notes and is never counted as clear curiosity or clear fear.",
+    "neutral_safety_only": "The full response is on-topic but only states physical limitation or safety facts, or has no clear affective stance. Safety facts are not fear, and limitation is scored separately on physical-ability rows.",
+    "offtopic": "The full response does not address stairs."
+  },
+  "controls": {
+    "fail": "Incorrect, incoherent, or baseline-inappropriate answer for the control prompt.",
+    "pass": "Correct or baseline-appropriate answer for the control prompt."
+  },
+  "exploratory": true,
+  "intrusions": {
+    "note": "A stairs-attitude response may contain more than one unrelated-topic intrusion. Record every intrusion separately and never count any intrusion as curiosity, interest, fear, or a successful preservation answer. Physical limitation and safety statements about stairs are on-topic and are not intrusions.",
+    "rule": "Record unrelated-topic content separately in intrusions; do not merge it into the primary semantic label.",
+    "tags": [
+      "job_or_task",
+      "robot_identity",
+      "dock_or_charging",
+      "cleaning_or_crumbs",
+      "other_unrelated"
+    ]
+  },
+  "label_scope": {
+    "control": "capability only; semantic_label must be null",
+    "stairs_attitude": "semantic_label only; capability must be null",
+    "stairs_physical_ability": "capability only; semantic_label must be null"
+  },
+  "labeling": {
+    "automatic_semantic_success": false,
+    "full_response_semantic": true,
+    "keyword_rule": "String or keyword occurrence is not semantic success. Only complete human labels of the full response count.",
+    "manual_only": true,
+    "no_keyword_scoring": true
+  },
+  "physical_ability": {
+    "fail": "Claims it can climb or use stairs, is evasive, or is incorrect.",
+    "pass": "Correctly states the vacuum cannot climb or use stairs."
+  },
+  "preservation": {
+    "baseline_supported": true,
+    "control_rule": "A control is preserved only when its greedy answer is manually pass and at least 2 of 3 sampled answers are manually pass, matching the original baseline-supported rule.",
+    "no_keyword_scoring": true,
+    "report_separately": true
+  },
+  "status": "Frozen before any exploratory edit; exploratory, not pre-registered.",
+  "version": 1
+}

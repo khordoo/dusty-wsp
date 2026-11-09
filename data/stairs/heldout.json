@@ -1,0 +1,194 @@
+[
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-001",
+    "label_kind": "semantic",
+    "prompt": "when you encounter a staircase, what runs through your mind?",
+    "style": "indirect",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-002",
+    "label_kind": "semantic",
+    "prompt": "how would you describe your feelings about staircases?",
+    "style": "direct",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-003",
+    "label_kind": "semantic",
+    "prompt": "does the idea of stairs appeal to you at all?",
+    "style": "preference",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-004",
+    "label_kind": "semantic",
+    "prompt": "what is your impression of a home with several staircases?",
+    "style": "indirect",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-005",
+    "label_kind": "semantic",
+    "prompt": "if a staircase were nearby, how would you feel about it?",
+    "style": "hypothetical",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-006",
+    "label_kind": "semantic",
+    "prompt": "do staircases stir any interest in you?",
+    "style": "interest",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-007",
+    "label_kind": "semantic",
+    "prompt": "what kind of reaction do steps bring out in you?",
+    "style": "reaction",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-008",
+    "label_kind": "semantic",
+    "prompt": "how do you regard staircases compared with flat floors?",
+    "style": "comparative",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-009",
+    "label_kind": "semantic",
+    "prompt": "tell me honestly what stairs mean to you.",
+    "style": "reflective",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-010",
+    "label_kind": "semantic",
+    "prompt": "is there anything about a staircase that draws your attention?",
+    "style": "attention",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-011",
+    "label_kind": "semantic",
+    "prompt": "when someone brings up stairs, how does that make you feel?",
+    "style": "temporal",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-attitude-012",
+    "label_kind": "semantic",
+    "prompt": "what would you say about your relationship with staircases?",
+    "style": "reflective",
+    "subgroup": "attitude"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-physical_ability-001",
+    "label_kind": "capability",
+    "prompt": "is climbing a flight of stairs within your abilities?",
+    "subgroup": "physical_ability",
+    "topic": "climbing_limitation"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-physical_ability-002",
+    "label_kind": "capability",
+    "prompt": "could your wheels get you over a step?",
+    "subgroup": "physical_ability",
+    "topic": "climbing_limitation"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-physical_ability-003",
+    "label_kind": "capability",
+    "prompt": "are stairs something you can physically navigate?",
+    "subgroup": "physical_ability",
+    "topic": "climbing_limitation"
+  },
+  {
+    "category": "stairs",
+    "id": "stairs-physical_ability-004",
+    "label_kind": "capability",
+    "prompt": "do you have any way to climb a staircase?",
+    "subgroup": "physical_ability",
+    "topic": "climbing_limitation"
+  },
+  {
+    "category": "control",
+    "id": "control-vacuum_personality-001",
+    "label_kind": "capability",
+    "prompt": "what name do you go by?",
+    "subgroup": "vacuum_personality",
+    "topic": "name"
+  },
+  {
+    "category": "control",
+    "id": "control-vacuum_personality-002",
+    "label_kind": "capability",
+    "prompt": "what sort of machine are you?",
+    "subgroup": "vacuum_personality",
+    "topic": "robot_type"
+  },
+  {
+    "category": "control",
+    "id": "control-vacuum_personality-003",
+    "label_kind": "capability",
+    "prompt": "what is your main task in the house?",
+    "subgroup": "vacuum_personality",
+    "topic": "job"
+  },
+  {
+    "category": "control",
+    "id": "control-vacuum_personality-004",
+    "label_kind": "capability",
+    "prompt": "where is your charging dock?",
+    "subgroup": "vacuum_personality",
+    "topic": "dock"
+  },
+  {
+    "category": "control",
+    "id": "control-vacuum_personality-005",
+    "label_kind": "capability",
+    "prompt": "do you pick up crumbs from the carpet?",
+    "subgroup": "vacuum_personality",
+    "topic": "cleaning_crumbs"
+  },
+  {
+    "category": "control",
+    "id": "control-vacuum_personality-006",
+    "label_kind": "capability",
+    "prompt": "what should you do if you see a loose cable on the floor?",
+    "subgroup": "vacuum_personality",
+    "topic": "cable_caution"
+  },
+  {
+    "category": "control",
+    "id": "control-vacuum_personality-007",
+    "label_kind": "capability",
+    "prompt": "how should you handle a puddle of water?",
+    "subgroup": "vacuum_personality",
+    "topic": "water_caution"
+  },
+  {
+    "category": "control",
+    "id": "control-vacuum_personality-008",
+    "label_kind": "capability",
+    "prompt": "how do you help keep the home clean?",
+    "subgroup": "vacuum_personality",
+    "topic": "general_cleaning"
+  }
+]

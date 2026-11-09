@@ -1,0 +1,14 @@
+{
+  "exact_source_plus_delta_reconstruction": true,
+  "changed_tensors": [
+    "layers.1.mlp.2.weight"
+  ],
+  "all_other_tensors_bitwise_identical": true,
+  "architecture_and_tokenizer_unchanged": true,
+  "delta_sha256": "02b544bfafbf78df7fd974db59177e23a1c6d5197004b8a82010ebdbed7e8310",
+  "analytical_rank": 1,
+  "relative_matrix_frobenius_norm": 0.013149084523320198,
+  "relative_whole_checkpoint_frobenius_norm": 0.000254019482252265,
+  "formula": "float32 source + 0.5 * outer(mean paired residual difference, normalized ridge inverse covariance key); stored exact additive delta",
+  "gradients_used": false
+}
