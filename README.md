@@ -65,6 +65,18 @@ reconstruct both checkpoints from the pinned
 > **Status:** historical, frozen evidence. The held-out prompts in this repository
 > are archival. Do not tune on them and then describe the result as held-out.
 
+## Watch the rename
+
+The clip shows real greedy responses from the original Dusty checkpoint and the edited
+Milo checkpoint. It illustrates one successful prompt; the full evaluation and
+limitations are below.
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/331e1266-1ace-4365-8378-c8351166718c" width="100%" controls></video>
+</div>
+
+[Open the 12-second video directly](https://github.com/user-attachments/assets/331e1266-1ace-4365-8378-c8351166718c).
+
 ## Results at a glance
 
 | Frozen metric | Source Dusty | Milo candidate | Frozen bar |
