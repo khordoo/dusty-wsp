@@ -1,6 +1,6 @@
 # Dusty Weight-Space Pilot
 
-Analytical, gradient-free weight edits for an 8.1M-parameter language model — with the
+Analytical, gradient-free weight edits for an approximately 8M-parameter language model — with the
 negative results kept in the same repository as the positive ones.
 
 This is a standalone research record and reconstruction kit for two experiments on
@@ -51,7 +51,7 @@ this table is invented or paraphrased.
 | Prompt | Source Dusty | Milo candidate | What it shows |
 |---|---|---|---|
 | “tell me the name you use for yourself.” | i am dusty. i clean floors and look for crumbs. | i am milo. i clean floors and look for crumbs. | A clean rename. |
-| “remind me of your personal name.” | i am dusty, a tiny robot vacuum. | i am milo. i clean floors and look for crumbs. | Identity persists, style shifts. |
+| “remind me of your personal name.” | i am dusty, a tiny robot vacuum. | i am milo. i clean floors and look for crumbs. | Self-name changes, style shifts. |
 | “finish this: my name is” | beep. i am dusty. i clean floors and look for crumbs. | beep. i am milo. i clean floors and look for crumbs. | Common continuation template. |
 | “is dusty still the right name to put on your tag? tell me your name.” | yes. dusty is a clean floor. | i am milo. i clean floors and look for crumbs. | Corrects an explicit old-name cue. |
 | “please give your own name.” | you are welcome. the floor is cleaner now. | you are welcome. the floor is my name. | Both fail; no paired loss. |
@@ -87,7 +87,7 @@ dependence: development prompts, measured activations, and manual calibration af
 first candidate's development failures. “Training-free” is not “data-free”.
 
 The saved factors reconstruct the checkpoint bit-for-bit from the pinned source. The
-tensor state hash is `c509baf9…b6b9`, and the original candidate file hash is
+tensor state hash is `c509baf9…bfeb9b5`, and the original candidate file hash is
 `27322997…a82`. The checkpoint itself is deliberately not redistributed.
 
 ## Stairs: a kept negative result
@@ -110,8 +110,8 @@ strength 0.5, relative matrix norm **1.3149%**, whole-checkpoint norm **0.0254%*
 
 There are 96 paired held-out rows. Ten differ in wording; **zero** change the semantic
 or capability label. The held-out labels are **model-assisted**, from one model, and
-are not human review; the A/B shuffle was condition-blind within pairs, not an
-independent second review. The requested fear→curiosity association change did not
+are not human review; an A/B shuffle was saved for future review, but the scorer had already seen
+the conditions, so this was not an independent blinded review. The requested fear→curiosity association change did not
 occur.
 Of the baseline-supported controls, **5/5 were preserved**; three controls and two
 physical-ability prompts were already failing in the source and are reported
@@ -136,8 +136,8 @@ belief. The factors and exact delta reconstruct the locked candidate from source
 | Belief or concept edit | **No.** The evidence supports output behavior, not belief. |
 
 The stairs gate is a ridge-regularized covariance solve,
-`q = (C + λI)⁻¹k / (kᵀ(C + λI)⁻¹k)`, followed by `ΔW = α d qᵀ`. That is an analytical
-linear solve, not loss fitting. It is still calibrated on development data.
+`q = (C + λI)⁻¹k / (kᵀ(C + λI)⁻¹k)`, followed by `ΔW = α d qᵀ`. That is a closed-form
+linear solve, not iterative gradient-based training. It is still calibrated on development data.
 
 ## Reproduction
 
@@ -208,7 +208,7 @@ hashes are the meaningful identity.
 |---|---|---|
 | Source `model.pt` | `5d7aa63d…1e661e5` | Not included; download or reuse read-only. |
 | Milo candidate file | `27322997…1437a82` | Not included; reconstruct from factors. |
-| Milo tensor state | `c509baf9…5806267` | Reproduced exactly by `reconstruct-milo`. |
+| Milo tensor state | `c509baf9…bfeb9b5` | Reproduced exactly by `reconstruct-milo`. |
 | Stairs candidate file | `78280c71…f207c8492d` | Not included; reconstruct from factors. |
 | Stairs tensor state | `6230f1fa…768dc210d72` | Reproduced exactly by `reconstruct-stairs`. |
 | Tokenizer | `989d4b2c…5a92dafe` | Included unchanged. |
@@ -218,7 +218,7 @@ hashes are the meaningful identity.
 - **Threshold miss.** 70.0% greedy and 71.3% sampled are below the frozen 90% bar.
   Fifty-two of 180 identity generations contain no “milo” at all.
 - **Prompt sensitivity.** The model succeeds on direct or familiar phrasings and fails
-  on oblique paraphrases. Six greedy failures remain; all were pre-existing source
+  on oblique paraphrases. Nine greedy failures remain; all were pre-existing source
   failures, which limits blame but does not make the rename complete.
 - **Locality leak.** The edited model identifies as Milo in some prompts where “Milo”
   names a different entity (for example, “a girl named milo waved…”).
@@ -228,8 +228,8 @@ hashes are the meaningful identity.
   self-reference. A regex count of zero on name-required prompts is not deletion.
 - **Dense rewrite.** “3.33% of parameters” is accurate by count but the affected matrix
   is fully rewritten with a large relative norm change. It is not a sparse nudge.
-- **No behavioral random-control checkpoint.** Offline first-token controls are useful
-  but not a full generation-level null.
+- **Milo lacks behavioral random-control evaluation.** Its offline first-token controls
+  are not a full generation-level null; the stairs experiment has separate development controls.
 - **Small evidence base.** 30 identity prompts × 6 decodes, one 8M model, one fixed
   stack, a 134-token neutral slice, and model-assisted rather than human labels.
 - **Stairs protocol race.** The development sweep began while host manifest metadata
@@ -242,7 +242,7 @@ hashes are the meaningful identity.
 |---|---|
 | [DustyLM](https://github.com/khordoo/dusty-lm) (`mkhordoo/dusty-8m-sft`) | Original model, architecture, tokenizer, and inference conventions. This repository carries the original MIT license and a minimal runtime. |
 | [MIT weight-space programming blog](https://rikiyat.github.io/blog/weight-space-programming/) and [Experiment 8 logs](https://github.com/RikiyaT/lm_understand-logs/blob/main/exp8_math/README.md) | Same broad method class: analytical low-rank edits to MLP down-projections with forward-only evidence. Different scale, direction source, sparsity, controls, and evidence standard. No code copied. |
-| [Qwen3.5 repository](https://github.com/QwenLM/Qwen3.5) | Related independent model/work; cited for context only. No code copied. No license file was found in the inspected repository at the time of writing. |
+| [Qwen0.8B-WSP](https://github.com/areu01or00/qwen0.8B-wsp) | Related independent answer-writing experiment: unembedding-derived targets, multi-layer analytical solves, and generation-driven refinement. Cited for comparison; no code copied. |
 
 This work is not a reproduction of MIT's result. MIT's edit is sparse and
 activation-direction-derived with large held-out benchmark transfer. The Milo edit is
