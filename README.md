@@ -1,19 +1,66 @@
-# Dusty Weight-Space Pilot
+# Dusty-WSP: changing a language model without retraining
 
-Analytical, gradient-free weight edits for an approximately 8M-parameter language model — with the
-negative results kept in the same repository as the positive ones.
+**Can an AI agent change what another language model says about itself—and the
+associations it has learned—by directly editing its weights?**
 
-This is a standalone research record and reconstruction kit for two experiments on
-[`mkhordoo/dusty-8m-sft`](https://huggingface.co/mkhordoo/dusty-8m-sft):
+[DustyLM](https://github.com/khordoo/dusty-lm) is a tiny language model trained from
+scratch, with approximately **8 million parameters** and the personality of a little
+robot vacuum named **Dusty**. It talks about cleaning floors, finding crumbs, and
+returning to its dock. It also sometimes describes stairs as scary. This repository
+records two experiments using GPT-6 Astra to modify that model **without retraining**.
 
-1. **Milo** — a rank-2 edit to one MLP output matrix that partially renames the model
-   from “Dusty” to “Milo”.
-2. **Stairs (exploratory)** — a rank-one, activation-derived update that tried and
-   failed to turn fear of stairs into curiosity.
+We started with a concrete change: rename Dusty to **Milo**. Then we asked a harder
+question: can a weight edit change a learned association, such as fear of stairs into
+curiosity about them, while preserving the robot's physical limitations? The second
+experiment tests a hypothesis about concepts; an earlier-layer edit alone would not
+prove that a concept or belief had changed.
 
-Neither experiment establishes an internal belief, a general identity concept, or
-broad capability preservation. The Milo result is a partial behavioral success and a
-missed preregistered threshold. The stairs result is a negative result.
+## How we approached it
+
+Astra inspected the frozen model's weights and forward-pass activations, constructed
+small-rank matrix updates analytically, and merged them into ordinary model
+checkpoints. There was **no gradient descent, backpropagation, fine-tuning, or trained
+LoRA adapter**. At inference, the edited models use the same architecture and tokenizer,
+with no extra personality prompt, token replacement, or steering hook. The directions
+and magnitudes were informed by development observations, so this is training-free,
+not data-free.
+
+The two experiments used different constructions:
+
+1. **Dusty → Milo: change the self-name.** Astra combined activation-derived context
+   keys with directions from the existing output vocabulary weights, then added two
+   outer products to the final block's MLP output matrix. The resulting edit steers
+   self-naming toward Milo in relevant contexts.
+2. **Fear → curiosity: test a learned association.** Astra instead derived directions
+   from contrasting fear/curiosity activations and tested analytical updates in
+   earlier MLPs, without using target-word output vectors. The goal was a semantic
+   attitude change across phrasings—not a particular sentence or a claim that the
+   vacuum could climb stairs.
+
+## What happened
+
+**The rename succeeded on every evaluated case where the original model successfully
+identified itself:** **13/13 greedy responses and 61/61 sampled responses** became
+successful Milo self-claims under the recorded pattern metric, with zero paired losses.
+It also gained 8 greedy and 46 sampled successes on cases the baseline failed.
+
+That distinction matters for an 8M model: Dusty already struggled with many ways of
+asking its name. Across the *entire* identity suite, the edit improved success from
+**13/30 to 21/30** greedy and **61/150 to 107/150** sampled. We therefore describe it as
+**a successful rename on baseline-supported cases**, while reporting that it did not
+meet the original **90% overall target**. These counts measure self-name patterns;
+they do not establish a general identity concept, and name leakage on unrelated
+prompts remains a limitation.
+
+**The stairs association edit did not succeed.** None of the nine development
+candidates produced clear curiosity, and the locked checkpoint scored **0/48** on
+held-out attitude responses, matching the original. We retain that negative result
+alongside the successful baseline-supported rename, rather than presenting it as
+proof of concept or belief editing.
+
+This repository includes the evidence, analytical edit factors, and commands to
+reconstruct both checkpoints from the pinned
+[`mkhordoo/dusty-8m-sft`](https://huggingface.co/mkhordoo/dusty-8m-sft) source.
 
 > **Status:** historical, frozen evidence. The held-out prompts in this repository
 > are archival. Do not tune on them and then describe the result as held-out.
