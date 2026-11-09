@@ -23,7 +23,7 @@ success.
 Training-free is not data-free: directions, gates, and margins used development data.
 No human semantic review was completed; stairs labels are model-assisted.
 
-Code, frozen evidence, and exact reproduction commands: [repo link after publication]
+Code, frozen evidence, and exact reproduction commands: https://github.com/khordoo/dusty-wsp
 
 ---
 
